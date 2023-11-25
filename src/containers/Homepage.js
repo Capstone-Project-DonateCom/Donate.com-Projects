@@ -66,14 +66,41 @@ const Homepage = () => {
               donasi kami.
             </p>
             <div className="mt-4">
-          <button className="bg-[#00B0B9] text-white ml-40 px-3 py-2 rounded-md font-semibold ">
-            Detail
-          </button>
-        </div>
+              <button className="bg-[#00B0B9] text-white ml-40 px-10 py-5 rounded-[1.2rem] font-semibold text-xl ">
+                Detail
+              </button>
+            </div>
           </div>
         </div>
         <div className=" w-[50%] pl-20 ">
-          <img src={hero2}/>
+          <img src={hero2} />
+        </div>
+      </div>
+      {/* Kategori Donasi */}
+      <div>
+        <div className="bg-[#00B0B9] h-[700px]  rounded-[5rem]">
+        <p className="text-white pt-20 pl-40 text-[3rem] font-bold">
+          Kategori Donasi
+          </p>
+          <div className="w-[43rem]">
+          <p className="text-white pt-5 pl-40 text-[1rem] font-normal">
+          Sesuaikan kategori donasimu sesuai dengan kategori donasi yang telah kami sediakan! 
+          </p>
+          </div>
+          <div className="flex pt-20 ml-[10rem] mr-[10rem]">
+              <button className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
+              <img className="" src="{house}" />
+              </button>
+              <button className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
+              <img src="{hospital}" />
+              </button>
+              <button className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
+              <img src="{Graduation}" />
+              </button>
+              <button className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
+              <img src="{Cash}" />
+              </button>
+          </div>
         </div>
       </div>
     </div>
