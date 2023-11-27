@@ -6,8 +6,9 @@ import hospital from "../assets/Hospital.png";
 import Graduation from "../assets/Graduation.png";
 import Cash from "../assets/Cash.png";
 import Navbar from "../components/navbar/Navbar";
-
-
+import logo2 from "../assets/logo2.png";
+import sponsor from "../assets/sponsor.png";
+import bulet from "../assets/bulet.png";
 
 const Homepage = () => {
   return (
@@ -97,7 +98,7 @@ const Homepage = () => {
               telah kami sediakan!
             </p>
           </div>
-          <div className="flex pt-20 ml-[10rem] mr-[10rem]">
+          <div className="flex pt-20 ml-[15rem] mr-[10rem]">
             <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem] ">
               <img className="mx-[4.5rem] my-8 mb-[4rem]" src={house} />
               <p className="flex justify-center">untuk</p>
@@ -146,8 +147,29 @@ const Homepage = () => {
         </div>
       </div>
       {/* Footer */}
-      <div>
-        
+      <div className="bg-[#00B0B9]">
+      <div className=" mt-[10rem] h-[272px] flex">
+        <div className="w-[25%] h-[25%] py-[5rem] mx-[8rem]">
+        <img className="" src={logo2} />
+        </div>
+        <div className="mt-[5rem] ml-[13rem] mr-[5rem]">
+          <p className="text-white mb-[2rem] font-bold">Menu</p>
+          <p className="text-white">Home</p>
+          <p className="text-white">Events</p>
+          <p className="text-white">Donates</p>
+          <p className="text-white">About us</p>
+        </div>
+        <div className="mt-[5rem] mx-[0rem]">
+          <p className="text-white mb-[2rem] font-bold">Sponsored By</p>
+         <img className="" src={sponsor}/>
+        </div>
+      </div>
+        <div className="bg-white  h-1 mx-[5rem] ">
+      </div>
+      <div className="text-white ml-[7rem] pt-[2rem]">
+        <p>© 2023 Donate.com by Capstone Team</p>
+      </div>
+
       </div>
     </div>
   );
