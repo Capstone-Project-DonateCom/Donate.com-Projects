@@ -98,26 +98,26 @@ const Homepage = () => {
             </p>
           </div>
           <div className="flex pt-20 ml-[10rem] mr-[10rem]">
-            <button className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem] ">
-              <img className="mx-[4.5rem] mb-[4rem]" src={house} />
-              <p className="">untuk</p>
-              <p className="font-bold text-xl" >Bencana</p>
-            </button>
-            <button className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
-              <img className="mx-[4.5rem] mb-[4rem]" src={hospital} />
-              <p className="">untuk</p>
-              <p className="font-bold text-xl">Kesehatan</p>
-            </button>
-            <button className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
-              <img className="mx-[4.5rem] mb-[4rem]" src={Graduation} />
-              <p>untuk</p>
-              <p className="font-bold text-xl">Pendidikan</p>
-            </button>
-            <button className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
-              <img className="mx-[4.5rem] mb-[4rem]" src={Cash} />
-              <p>untuk</p>
-              <p className="font-bold text-xl">Lain-lain</p>
-            </button>
+            <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem] ">
+              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={house} />
+              <p className="flex justify-center">untuk</p>
+              <p className="flex justify-center font-bold text-xl" >Bencana</p>
+            </div>
+            <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
+              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={hospital} />
+              <p className="flex justify-center">untuk</p>
+              <p className="flex justify-center font-bold text-xl">Kesehatan</p>
+            </div>
+            <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
+              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={Graduation} />
+              <p className="flex justify-center">untuk</p>
+              <p className="flex justify-center font-bold text-xl">Pendidikan</p>
+            </div>
+            <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
+              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={Cash} />
+              <p className="flex justify-center">untuk</p>
+              <p className="flex justify-center font-bold text-xl">Lain-lain</p>
+            </div>
           </div>
         </div>
       </div>
