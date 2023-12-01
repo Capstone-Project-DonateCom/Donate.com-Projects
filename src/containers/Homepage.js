@@ -75,15 +75,14 @@ const Homepage = () => {
               donasi kami.
             </p>
             <div className="mt-4">
-              <button className="bg-[#00B0B9] text-white ml-40 px-10 py-5 rounded-[1.2rem] font-semibold text-xl ">
-              <p className="text-xl"> Detail          &#62;</p>
+              <button className="bg-[#00B0B9] text-white ml-40 px-3 py-3 rounded-[0.5rem] font-semibold text-xl ">
+                <p className="text-xl"> Detail &#62;</p>
               </button>
-              
             </div>
           </div>
         </div>
         <div className=" w-[50%] pl-20 ">
-          <img src={hero2}/>
+          <img src={hero2} />
         </div>
       </div>
       {/* Kategori Donasi */}
@@ -102,7 +101,7 @@ const Homepage = () => {
             <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem] ">
               <img className="mx-[4.5rem] my-8 mb-[4rem]" src={house} />
               <p className="flex justify-center">untuk</p>
-              <p className="flex justify-center font-bold text-xl" >Bencana</p>
+              <p className="flex justify-center font-bold text-xl">Bencana</p>
             </div>
             <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
               <img className="mx-[4.5rem] my-8 mb-[4rem]" src={hospital} />
@@ -112,7 +111,9 @@ const Homepage = () => {
             <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
               <img className="mx-[4.5rem] my-8 mb-[4rem]" src={Graduation} />
               <p className="flex justify-center">untuk</p>
-              <p className="flex justify-center font-bold text-xl">Pendidikan</p>
+              <p className="flex justify-center font-bold text-xl">
+                Pendidikan
+              </p>
             </div>
             <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
               <img className="mx-[4.5rem] my-8 mb-[4rem]" src={Cash} />
@@ -148,28 +149,26 @@ const Homepage = () => {
       </div>
       {/* Footer */}
       <div className="bg-[#00B0B9]">
-      <div className=" mt-[10rem] h-[272px] flex">
-        <div className="w-[25%] h-[25%] py-[5rem] mx-[8rem]">
-        <img className="" src={logo2} />
+        <div className=" mt-[10rem] h-[272px] flex">
+          <div className="w-[25%] h-[25%] py-[5rem] mx-[8rem]">
+            <img className="" src={logo2} />
+          </div>
+          <div className="mt-[5rem] ml-[13rem] mr-[5rem]">
+            <p className="text-white mb-[2rem] font-bold">Menu</p>
+            <p className="text-white">Home</p>
+            <p className="text-white">Events</p>
+            <p className="text-white">Donates</p>
+            <p className="text-white">About us</p>
+          </div>
+          <div className="mt-[5rem] mx-[0rem]">
+            <p className="text-white mb-[2rem] font-bold">Sponsored By</p>
+            <img className="" src={sponsor} />
+          </div>
         </div>
-        <div className="mt-[5rem] ml-[13rem] mr-[5rem]">
-          <p className="text-white mb-[2rem] font-bold">Menu</p>
-          <p className="text-white">Home</p>
-          <p className="text-white">Events</p>
-          <p className="text-white">Donates</p>
-          <p className="text-white">About us</p>
+        <div className="bg-white  h-1 mx-[5rem] "></div>
+        <div className="text-white ml-[7rem] pt-[2rem]">
+          <p>© 2023 Donate.com by Capstone Team</p>
         </div>
-        <div className="mt-[5rem] mx-[0rem]">
-          <p className="text-white mb-[2rem] font-bold">Sponsored By</p>
-         <img className="" src={sponsor}/>
-        </div>
-      </div>
-        <div className="bg-white  h-1 mx-[5rem] ">
-      </div>
-      <div className="text-white ml-[7rem] pt-[2rem]">
-        <p>© 2023 Donate.com by Capstone Team</p>
-      </div>
-
       </div>
     </div>
   );

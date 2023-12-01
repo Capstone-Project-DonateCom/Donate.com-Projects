@@ -10,31 +10,32 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import Detail from "./containers/Detail";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: (
-       <Homepage/>
-      ),
+      element: <Homepage />,
     },
     {
       path: "/about",
-      element: <About/>,
+      element: <About />,
     },
     {
       path: "/events",
-      element: <Events/>
+      element: <Events />,
     },
     {
       path: "/donates",
-      element: <Donates/>
-    }
+      element: <Donates />,
+    },
+    {
+      path: "/events/:id",
+      element: <Detail />,
+    },
   ]);
-  return (
-    <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
