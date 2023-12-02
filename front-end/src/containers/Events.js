@@ -1,49 +1,27 @@
-import React from "react";
+import React, {useEffect, useState} from 'react';
 import Navbar from "../components/navbar/Navbar";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
 import searchIcon from "../assets/Search.png";
 import Card from "../components/Card";
+import axios from 'axios';
 
-const Events = () => {
-  const data = [
-    {
-      image: "https://upload.wikimedia.org/wikipedia/id/1/1f/Dewaruci.jpg",
-      title: "Donasi Bencana Banjir ",
-      description:
-        "Bencana banjir telah melanda wilayah kami, dan ribuan keluarga menghadapi situasi darurat yang mendesak. Air bah telah merusak rumah mereka, merampas harta benda, meninggalkan mereka tanpa tempat tinggal. ",
-      labelDate: "20 Okt - 25 Okt 2023 ",
-      location: "Kemang, Jakarta",
-      id: 1,
-    },
-    {
-      image: "https://upload.wikimedia.org/wikipedia/id/1/1f/Dewaruci.jpg",
-      title: "Donasi untuk Palestina ",
-      description:
-        "Palestina menghadapi tantangan besar akibat konflik dan krisis kemanusiaan yang berkepanjangan. Ribuan orang, termasuk anak-anak, wanita, dan lansia, merasakan dampaknya setiap hari. ",
-      labelDate: "17 Nov - 30 Nov 2023",
-      location: "Gaza, Palestina",
-      id: 3,
-    },
-    {
-      image: "https://upload.wikimedia.org/wikipedia/id/1/1f/Dewaruci.jpg",
-      title: "Donasi Tanah Longsor ",
-      description:
-        "Tanjakan curam dan hujan deras telah menyebabkan tanah longsor yang merusak sejumlah wilayah. Bantuan mendesak diperlukan untuk membantu korban yang terdampak. Setiap donasi Anda dapat membuat perbedaan besar dalam memulihkan kehidupan mereka.",
-      labelDate: "26 Des - 30 Des 2023",
-      location: "Pati, Jawa Tengah ",
-      id: 2,
-    },
-    {
-      image: "https://upload.wikimedia.org/wikipedia/id/1/1f/Dewaruci.jpg",
-      title: "Donasi Anak Yatim ",
-      description:
-        "Banyak anak yatim di seluruh dunia yang menghadapi tantangan besar setiap hari. Kehilangan orang tua tidak hanya meninggalkan mereka tanpa dukungan emosional, tetapi juga memengaruhi akses mereka terhadap pendidikan, kesehatan, dan peluang masa depan. ",
-      labelDate: "15 Jan - 30 Jan 2024 ",
-      location: "Tangerang, Banten",
-      id: 4,
-    },
-  ];
+
+function Events() {
+  const [events, setEvents] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:8000/')
+    .then(res => setEvents(res.data))
+    .catch(err => console.log(err));
+  });
+  const data = events.map(event => ({
+    image: 'https://upload.wikimedia.org/wikipedia/id/1/1f/Dewaruci.jpg',
+    title: event.judul_donasi,
+    description: event.deskripsi_donasi,
+    labelDate: event.batas_donasi,
+    location: event.alamat,
+  }));
+
   return (
     <div>
       <Navbar />
@@ -61,18 +39,9 @@ const Events = () => {
           </form>
         </div>
         <div className="grid grid-cols-3 mt-16 gap-20">
-          {data.map(
-            ({ description, image, labelDate, location, title, id }) => (
-              <Card
-                description={description}
-                image={image}
-                labelDate={labelDate}
-                location={location}
-                title={title}
-                id={id}
-              ></Card>
-            )
-          )}
+        {data.map(({ description, image, labelDate, location, title }, index) => (
+        <Card key={index} description={description} image={image} labelDate={labelDate} location={location} title={title} />
+      ))};
         </div>
       </div>
       {/* Footer */}
