@@ -99,24 +99,24 @@ const Homepage = () => {
           </div>
           <div className="flex pt-20 ml-[15rem] mr-[10rem]">
             <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem] ">
-              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={house} />
+              <img className="mx-[4rem] my-8 mb-[4rem]" src={house} />
               <p className="flex justify-center">untuk</p>
               <p className="flex justify-center font-bold text-xl">Bencana</p>
             </div>
             <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
-              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={hospital} />
+              <img className="mx-[4rem] my-8 mb-[4rem]" src={hospital} />
               <p className="flex justify-center">untuk</p>
               <p className="flex justify-center font-bold text-xl">Kesehatan</p>
             </div>
             <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
-              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={Graduation} />
+              <img className="mx-[4rem] my-8 mb-[4rem]" src={Graduation} />
               <p className="flex justify-center">untuk</p>
               <p className="flex justify-center font-bold text-xl">
                 Pendidikan
               </p>
             </div>
             <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
-              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={Cash} />
+              <img className="mx-[4rem] my-8 mb-[4rem]" src={Cash} />
               <p className="flex justify-center">untuk</p>
               <p className="flex justify-center font-bold text-xl">Lain-lain</p>
             </div>
@@ -124,7 +124,7 @@ const Homepage = () => {
         </div>
       </div>
       {/* FAQ */}
-      <div>
+      {/* <div>
         <div className="flex justify-center pt-40 text-[3rem] font-bold pb-20">
           <p>FAQ</p>
         </div>
@@ -146,7 +146,87 @@ const Homepage = () => {
             Bagaimana cara melihat berita tentang kebutuhan donasi?
           </p>
         </div>
-      </div>
+      </div> */}
+      <ul class="max-w-2xl mx-auto mt-20 divide-y  shadow shadow-blue-600 rounded-xl">
+    <li>
+        <details class="group">
+            <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                    width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                    </path>
+                </svg>
+                <span>What am I getting as a Premium Member?</span>
+            </summary>
+
+            <article class="px-4 pb-4">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie
+                    porttitor augue vitae vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique tellus.
+                </p>
+            </article>
+        </details>
+    </li>
+    <li>
+        <details class="group">
+            <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                    width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                    </path>
+                </svg>
+                <span>What am I getting as a Premium Member?</span>
+            </summary>
+
+            <article class="px-4 pb-4">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie
+                    porttitor augue vitae vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique tellus. </p>
+            </article>
+        </details>
+    </li>
+    <li>
+        <details class="group">
+            <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                    width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                    </path>
+                </svg>
+                <span>What am I getting as a Premium Member?</span>
+            </summary>
+
+            <article class="px-4 pb-4">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie
+                    porttitor augue vitae vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique tellus. </p>
+            </article>
+        </details>
+    </li>
+    <li>
+        <details class="group">
+            <summary class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
+                <svg class="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg"
+                    width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z">
+                    </path>
+                </svg>
+                <span>What am I getting as a Premium Member?</span>
+            </summary>
+
+            <article class="px-4 pb-4">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ipsum sapien. Vestibulum molestie
+                    porttitor augue vitae vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique tellus. </p>
+            </article>
+        </details>
+    </li>
+
+</ul>
       {/* Footer */}
       <div className="bg-[#00B0B9]">
         <div className=" mt-[10rem] h-[272px] flex">

@@ -34,6 +34,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/Logo.png";
 
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
@@ -44,8 +45,8 @@ export default function NavBar() {
                 <div>
                     <div className="flex  text-[#00B0B9] items-center justify-between py-3 md:py-5 md:block">
                         <a href="javascript:void(0)">
-                            <h2 className="text-2xl font-bold">Donate.com</h2>
-                            {/* <img src="Logo"/> */}
+                            {/* <h2 className="text-2xl font-bold">Donate.com</h2> */}
+                            <img src={Logo}/>
                         </a>
                         <div className="md:hidden">
                             <button
