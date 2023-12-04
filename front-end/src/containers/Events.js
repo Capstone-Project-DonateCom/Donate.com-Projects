@@ -15,7 +15,7 @@ function Events() {
     .catch(err => console.log(err));
   });
   const data = events.map(event => ({
-    image: 'https://upload.wikimedia.org/wikipedia/id/1/1f/Dewaruci.jpg',
+    image: event.poster,
     title: event.judul_donasi,
     description: event.deskripsi_donasi,
     labelDate: event.batas_donasi,
@@ -30,7 +30,7 @@ function Events() {
           <form className="flex bg-white min-w-[280px] mx-auto px-4 py-2 rounded-md justify-between items-center gap-x-2">
             <input
               className="bg-transparent outline-none w-full"
-              placeholder="Masukkan Event Yang Kamu Cari"
+              placeholder="Masukkan Event..."
               type="text"
             />
             <div>
@@ -41,7 +41,7 @@ function Events() {
         <div className="grid grid-cols-3 mt-16 gap-20">
         {data.map(({ description, image, labelDate, location, title }, index) => (
         <Card key={index} description={description} image={image} labelDate={labelDate} location={location} title={title} />
-      ))};
+      ))}
         </div>
       </div>
       {/* Footer */}

@@ -2,7 +2,7 @@ import React from "react";
 import logoLocation from ".././assets/Location.png";
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ image, title, description, labelDate, location, id }) => {
+const Card = ({ poster, title, description, labelDate, location, id }) => {
   const navigate = useNavigate();
   const handleDetail = (idEvents) => {
     navigate(`/events/${idEvents}`);
@@ -10,7 +10,7 @@ const Card = ({ image, title, description, labelDate, location, id }) => {
   return (
     <div className="flex flex-col p-5 bg-white rounded-xl w-fit mx-auto">
       <div>
-        <img className="" src={image} alt="image" />
+        <img className="" src={poster} alt="image" />
       </div>
       <div className="mt-4 h-full flex flex-col">
         <p className="font-bold text-2xl">{title}</p>
