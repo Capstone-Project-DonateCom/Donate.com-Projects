@@ -1,36 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import NavBar from "../components/navbar/Navbar";
 import gform from "../assets/gform.png";
 import t3 from "../assets/t3.png";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-export const Donates = () => {
-  const dataLocal = JSON.parse(localStorage.getItem("events")) || [];
-  const [name, setName] = useState("");
-  const [form, setForm] = useState({});
-  const [data, setData] = useState(dataLocal);
 
-  useEffect(() => {
-    setForm({
-      name,
-    });
-  }, [name]);
+function Donates() {
+  const [judul, setJudul] = useState('');
+  const [nama, setNama] = useState('');
+  const [date, setDate] = useState('');
+  const [number, setNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [kategori, setKategori] = useState('');
+  const [gambar, setGambar] = useState('');
+  const [alamat, setAlamat] = useState('');
+  const [deskripsi, setDeskripsi] = useState('');
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const dataString = JSON.stringify(data);
-    localStorage.setItem("events", dataString);
-  }, [data]);
-
-  const handleSubmitEvent = (e) => {
-    e.preventDefault();
-    setData([...data, [...[form]]]);
+  function handleSubmit(event) {
+    event.preventDefault(); // Menghentikan behavior default dari form submission
+    axios.post('http://localhost:8000/donates', {
+      nama: nama,
+      email: email,
+      judul: judul,
+      date: date,
+      kategori: kategori,
+      deskripsi: deskripsi,
+      number: number,
+      alamat: alamat,
+      gambar: gambar
+    })
+    .then(res => {
+      console.log(res);
+      navigate('/Events');
+    })
+    .catch(err => console.log(err));
   };
 
-  const onChangeNama = (e) => {
-    const { value } = e.target;
-    setName(value);
-  };
   return (
     <div>
       <NavBar />
@@ -74,7 +83,7 @@ export const Donates = () => {
             <div class="px-4 sm:px-0"></div>
           </div>
           <div class="mt-5 md:mt-0 md:col-span-2">
-            <form onSubmit={handleSubmitEvent} action="#" method="POST">
+            <form onSubmit={handleSubmit}>
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
                   <div class="grid grid-cols-6 gap-6">
@@ -86,8 +95,7 @@ export const Donates = () => {
                         Judul Donasi
                       </label>
                       <input
-                        value={name}
-                        onChange={onChangeNama}
+                        onChange={e => setJudul(e.target.value)}
                         type="text"
                         name="first_name"
                         id="first_name"
@@ -104,6 +112,7 @@ export const Donates = () => {
                         Nama Donatur
                       </label>
                       <input
+                        onChange={e => setNama(e.target.value)}
                         type="text"
                         name="last_name"
                         id="last_name"
@@ -120,6 +129,7 @@ export const Donates = () => {
                         Tanggal Selesai Donasi
                       </label>
                       <input
+                        onChange={e => setDate(e.target.value)}
                         type="date"
                         name="tanggal_selesai_donasi"
                         id="tanggal_selesai_donasi"
@@ -132,6 +142,7 @@ export const Donates = () => {
                         No Hp
                       </label>
                       <input
+                        onChange={e => setNumber(e.target.value)}
                         type="tel"
                         name="no_hp"
                         id="no_hp"
@@ -147,6 +158,7 @@ export const Donates = () => {
                         Email
                       </label>
                       <input
+                        onChange={e => setEmail(e.target.value)}
                         type="email"
                         name="email"
                         id="email"
@@ -164,6 +176,7 @@ export const Donates = () => {
                         Kategori Donasi
                       </label>
                       <select
+                        onChange={e => setKategori(e.target.value)}
                         id="country"
                         name="country"
                         autocomplete="country"
@@ -180,6 +193,7 @@ export const Donates = () => {
                         Upload Gambar
                       </label>
                       <input
+                        onChange={e => setGambar(e.target.value)}
                         type="file"
                         className="mt-1 p-2 border border-black border-2 py-3 mr-10 block w-[30.8rem]"
                       ></input>
@@ -192,6 +206,7 @@ export const Donates = () => {
                         Alamat
                       </label>
                       <input
+                        onChange={e => setAlamat(e.target.value)}
                         type="text"
                         name="alamat"
                         id="alamat"
@@ -207,6 +222,7 @@ export const Donates = () => {
                         Deskripsi
                       </label>
                       <textarea
+                        onChange={e => setDeskripsi(e.target.value)}
                         name="deskripsi"
                         id="deskripsi"
                         rows="8"
