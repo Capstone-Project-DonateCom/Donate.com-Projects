@@ -2,7 +2,14 @@ import React from "react";
 import logoLocation from ".././assets/Location.png";
 import { useNavigate } from "react-router-dom";
 
-const CardAwal = ({ imageAwal, titleAwal, descriptionAwal, labelDateAwal, locationAwal, idAwal }) => {
+const CardAwal = ({
+  imageAwal,
+  titleAwal,
+  descriptionAwal,
+  labelDateAwal,
+  locationAwal,
+  idAwal,
+}) => {
   const navigate = useNavigate();
   const handleDetail = (idEvents) => {
     navigate(`/events/${idEvents}`);
@@ -15,7 +22,9 @@ const CardAwal = ({ imageAwal, titleAwal, descriptionAwal, labelDateAwal, locati
       <div className="mt-4 h-full flex flex-col">
         <p className="font-bold text-2xl">{titleAwal}</p>
         <p className="font-semibold text-base">{labelDateAwal}</p>
-        <p className="text-base leading-normal text-justify">{descriptionAwal}</p>
+        <p className="text-base leading-normal text-justify">
+          {descriptionAwal}
+        </p>
         <div className="flex justify-between mt-auto">
           <div className="flex w-full items-center gap-x-3">
             <img src={logoLocation} alt="location" />
