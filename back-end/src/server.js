@@ -1,14 +1,31 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
+/* eslint-disable linebreak-style */
+/* eslint-disable prefer-template */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-use-before-define */
+/* eslint-disable linebreak-style */
 /* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
+const multer = require('multer');
+const path = require('path');
 
 const app = express();
 app.use(express.json());
 
 app.use(cors());
 const port = 8000;
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    db(null, 'public/images');
+  },
+  filename: (req, file, cb) => {
+    db(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
+  },
+});
 
 const db = mysql.createConnection({
   host: 'localhost',
