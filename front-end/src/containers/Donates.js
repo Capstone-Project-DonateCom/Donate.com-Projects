@@ -15,29 +15,35 @@ function Donates() {
   const [number, setNumber] = useState('');
   const [email, setEmail] = useState('');
   const [kategori, setKategori] = useState('');
-  const [gambar, setGambar] = useState('');
+  const [gambar, setGambar] = useState(null);
   const [alamat, setAlamat] = useState('');
   const [deskripsi, setDeskripsi] = useState('');
   const navigate = useNavigate();
 
+  const handleFileChange = (event) => {
+    // Update 'gambar' state with the selected file
+    setGambar(event.target.files[0]);
+  };
+
   function handleSubmit(event) {
     event.preventDefault(); // Menghentikan behavior default dari form submission
-    axios.post('http://localhost:8000/donates', {
-      nama: nama,
-      email: email,
-      judul: judul,
-      date: date,
-      kategori: kategori,
-      deskripsi: deskripsi,
-      number: number,
-      alamat: alamat,
-      gambar: gambar
-    })
-    .then(res => {
-      console.log(res);
-      navigate('/Events');
-    })
-    .catch(err => console.log(err));
+    const formData = new FormData();
+    formData.append('nama', nama);
+    formData.append('email', email);
+    formData.append('judul', judul);
+    formData.append('date', date);
+    formData.append('kategori', kategori);
+    formData.append('deskripsi', deskripsi);
+    formData.append('number', number);
+    formData.append('alamat', alamat);
+    formData.append('gambar', gambar); // Append the file object
+
+    axios.post('http://localhost:8000/donates', formData)
+      .then((res) => {
+        console.log(res);
+        navigate('/Events');
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -89,7 +95,7 @@ function Donates() {
                   <div class="grid grid-cols-6 gap-6">
                     <div class="col-span-6 sm:col-span-3">
                       <label
-                        for="first_name"
+                        for="judul"
                         class="block text-sm font-medium "
                       >
                         Judul Donasi
@@ -97,8 +103,8 @@ function Donates() {
                       <input
                         onChange={e => setJudul(e.target.value)}
                         type="text"
-                        name="first_name"
-                        id="first_name"
+                        name="judul"
+                        id="judul"
                         autocomplete="given-name"
                         class="mt-1 focus:ring-[#00B0B9] focus:border-[#00B0B9] block w-full shadow-sm sm:text-sm border-black border-2 py-3"
                       ></input>
@@ -106,7 +112,7 @@ function Donates() {
 
                     <div class="col-span-6 sm:col-span-3">
                       <label
-                        for="last_name"
+                        for="nama"
                         class="block text-sm font-medium text-gray-700"
                       >
                         Nama Donatur
@@ -114,8 +120,8 @@ function Donates() {
                       <input
                         onChange={e => setNama(e.target.value)}
                         type="text"
-                        name="last_name"
-                        id="last_name"
+                        name="nama"
+                        id="nama"
                         autocomplete="family-name"
                         className="mt-1 focus:ring-[#00B0B9] focus:border-[#00B0B9] block w-full shadow-sm sm:text-sm border-black border-2 py-3"
                       ></input>
@@ -123,7 +129,7 @@ function Donates() {
 
                     <div className="col-span-6 sm:col-span-3">
                       <label
-                        for="tanggal_selesai_donasi"
+                        for="date"
                         class="block text-sm font-medium mb-1"
                       >
                         Tanggal Selesai Donasi
@@ -131,21 +137,21 @@ function Donates() {
                       <input
                         onChange={e => setDate(e.target.value)}
                         type="date"
-                        name="tanggal_selesai_donasi"
-                        id="tanggal_selesai_donasi"
+                        name="date"
+                        id="date"
                         class="mt-1 focus:ring-[#00B0B9] focus:border-[#00B0B9] block w-full shadow-sm sm:text-sm border-black border-2 py-3"
                       />
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                      <label for="no_hp" class="block text-sm font-medium">
+                      <label for="number" class="block text-sm font-medium">
                         No Hp
                       </label>
                       <input
                         onChange={e => setNumber(e.target.value)}
                         type="tel"
-                        name="no_hp"
-                        id="no_hp"
+                        name="number"
+                        id="number"
                         autocomplete="tel"
                         pattern="[0-9]{10,}"
                         title="Masukkan setidaknya 10 digit angka"
@@ -170,16 +176,16 @@ function Donates() {
 
                     <div className="col-span-6 sm:col-span-3">
                       <label
-                        for="country"
+                        for="kategori"
                         className="block text-sm font-medium text-gray-700"
                       >
                         Kategori Donasi
                       </label>
                       <select
                         onChange={e => setKategori(e.target.value)}
-                        id="country"
-                        name="country"
-                        autocomplete="country"
+                        id="kategori"
+                        name="kategori"
+                        autocomplete="kategori"
                         className="mt-1 block w-full  border bg-white shadow-sm focus:outline-none focus:ring-black focus:border-black sm:text-sm  border-black border-2 py-3"
                       >
                         <option>Bencana</option>
@@ -193,8 +199,10 @@ function Donates() {
                         Upload Gambar
                       </label>
                       <input
-                        onChange={e => setGambar(e.target.value)}
+                        onChange={handleFileChange}
                         type="file"
+                        name="gambar"
+                        id="gambar"
                         className="mt-1 p-2 border border-black border-2 py-3 mr-10 block w-[30.8rem]"
                       ></input>
                     </div>

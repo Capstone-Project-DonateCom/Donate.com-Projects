@@ -1,14 +1,26 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-unused-vars */
+/* eslint-disable linebreak-style */
+/* eslint-disable object-shorthand */
+/* eslint-disable prefer-destructuring */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-undef */
+/* eslint-disable linebreak-style */
+/* eslint-disable object-curly-spacing */
+/* eslint-disable linebreak-style */
 /* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
+const multer = require('multer');
 
 const app = express();
 app.use(express.json());
 
 app.use(cors());
 const port = 8000;
+
+const upload = multer({storage: multer.memoryStorage()});
 
 const db = mysql.createConnection({
   host: 'localhost',
@@ -46,6 +58,15 @@ app.post('/donates', (req, res) => {
     console.log('Data berhasil disimpan:', result);
     return res.status(200).json({ message: 'Data berhasil disimpan.' });
   });
+});
+
+// eslint-disable-next-line no-unused-vars
+app.post('/fotoDB', upload.single('gambar'), (req, res) => {
+  const gambar = req.file;
+  const gambarv2 = req.body.gambar;
+  const judul = req.body.judul;
+
+  res.status(200).json({ message: 'File uploaded successfully.', judul: judul, gambar: gambar });
 });
 
 app.listen(port, () => {
