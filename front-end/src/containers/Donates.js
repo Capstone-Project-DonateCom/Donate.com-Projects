@@ -15,35 +15,29 @@ function Donates() {
   const [number, setNumber] = useState('');
   const [email, setEmail] = useState('');
   const [kategori, setKategori] = useState('');
-  const [gambar, setGambar] = useState(null);
+  const [gambar, setGambar] = useState();
   const [alamat, setAlamat] = useState('');
   const [deskripsi, setDeskripsi] = useState('');
   const navigate = useNavigate();
 
-  const handleFileChange = (event) => {
-    // Update 'gambar' state with the selected file
-    setGambar(event.target.files[0]);
-  };
-
   function handleSubmit(event) {
     event.preventDefault(); // Menghentikan behavior default dari form submission
-    const formData = new FormData();
-    formData.append('nama', nama);
-    formData.append('email', email);
-    formData.append('judul', judul);
-    formData.append('date', date);
-    formData.append('kategori', kategori);
-    formData.append('deskripsi', deskripsi);
-    formData.append('number', number);
-    formData.append('alamat', alamat);
-    formData.append('gambar', gambar); // Append the file object
-
-    axios.post('http://localhost:8000/donates', formData)
-      .then((res) => {
-        console.log(res);
-        navigate('/Events');
-      })
-      .catch((err) => console.log(err));
+    axios.post('http://localhost:8000/donates', {
+      nama: nama,
+      email: email,
+      judul: judul,
+      date: date,
+      kategori: kategori,
+      deskripsi: deskripsi,
+      number: number,
+      alamat: alamat,
+      gambar: gambar
+    })
+    .then(res => {
+      console.log(res);
+      navigate('/Events');
+    })
+    .catch(err => console.log(err));
   };
 
   return (
@@ -95,7 +89,7 @@ function Donates() {
                   <div class="grid grid-cols-6 gap-6">
                     <div class="col-span-6 sm:col-span-3">
                       <label
-                        for="judul"
+                        for="first_name"
                         class="block text-sm font-medium "
                       >
                         Judul Donasi
@@ -112,7 +106,7 @@ function Donates() {
 
                     <div class="col-span-6 sm:col-span-3">
                       <label
-                        for="nama"
+                        for="last_name"
                         class="block text-sm font-medium text-gray-700"
                       >
                         Nama Donatur
@@ -129,7 +123,7 @@ function Donates() {
 
                     <div className="col-span-6 sm:col-span-3">
                       <label
-                        for="date"
+                        for="tanggal_selesai_donasi"
                         class="block text-sm font-medium mb-1"
                       >
                         Tanggal Selesai Donasi
@@ -144,7 +138,7 @@ function Donates() {
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                      <label for="number" class="block text-sm font-medium">
+                      <label for="no_hp" class="block text-sm font-medium">
                         No Hp
                       </label>
                       <input
@@ -176,7 +170,7 @@ function Donates() {
 
                     <div className="col-span-6 sm:col-span-3">
                       <label
-                        for="kategori"
+                        for="country"
                         className="block text-sm font-medium text-gray-700"
                       >
                         Kategori Donasi
@@ -199,7 +193,7 @@ function Donates() {
                         Upload Gambar
                       </label>
                       <input
-                        onChange={handleFileChange}
+                        onChange={e => setGambar(e.target.value)}
                         type="file"
                         name="gambar"
                         id="gambar"
@@ -281,3 +275,4 @@ function Donates() {
 };
 
 export default Donates;
+
