@@ -1,16 +1,27 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
 /* eslint-disable linebreak-style */
-/* eslint-disable prefer-template */
+/* eslint-disable object-shorthand */
+/* eslint-disable prefer-destructuring */
 /* eslint-disable linebreak-style */
-/* eslint-disable no-use-before-define */
+/* eslint-disable no-undef */
+/* eslint-disable linebreak-style */
+/* eslint-disable object-curly-spacing */
 /* eslint-disable linebreak-style */
 /* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
-const multer = require('multer');
+const multure = require('multer');
 const path = require('path');
+
+const storage = multure.diskStorage({
+  destination: './src/image/',
+  // eslint-disable-next-line arrow-body-style
+  filename: (req, file, cb) => {
+    return cb(null, `${file.filename}_${Date.now()}${path.extname(file.originalname)}`);
+  },
+});
 
 const app = express();
 app.use(express.json());
@@ -18,13 +29,8 @@ app.use(express.json());
 app.use(cors());
 const port = 8000;
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    db(null, 'public/images');
-  },
-  filename: (req, file, cb) => {
-    db(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
-  },
+const upload = multure({
+  storage: storage,
 });
 
 const db = mysql.createConnection({
@@ -42,7 +48,7 @@ app.get('/', (req, res) => {
   });
 });
 
-app.post('/donates', (req, res) => {
+app.post('/donates', upload.single('image'), (req, res) => {
   const sql = 'INSERT INTO donasi (`nama_donatur`, `email`, `judul_donasi`, `batas_donasi`, `kategori_donasi`, `deskripsi_donasi`, `no_telepon`, `alamat`, `poster`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
   const values = [
     req.body.nama,
@@ -53,7 +59,7 @@ app.post('/donates', (req, res) => {
     req.body.deskripsi,
     req.body.number,
     req.body.alamat,
-    req.body.gambar,
+    req.file.filename,
   ];
   db.query(sql, values, (err, result) => {
     if (err) {
