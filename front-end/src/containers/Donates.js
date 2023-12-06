@@ -5,8 +5,6 @@ import t3 from "../assets/t3.png";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-
 
 function Donates() {
   const [judul, setJudul] = useState('');
@@ -15,29 +13,67 @@ function Donates() {
   const [number, setNumber] = useState('');
   const [email, setEmail] = useState('');
   const [kategori, setKategori] = useState('');
-  const [gambar, setGambar] = useState();
+  const [gambar, setGambar] = useState('');
   const [alamat, setAlamat] = useState('');
   const [deskripsi, setDeskripsi] = useState('');
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  function handleSubmit(event) {
-    event.preventDefault(); // Menghentikan behavior default dari form submission
-    axios.post('http://localhost:8000/donates', {
-      nama: nama,
-      email: email,
-      judul: judul,
-      date: date,
-      kategori: kategori,
-      deskripsi: deskripsi,
-      number: number,
-      alamat: alamat,
-      gambar: gambar
-    })
-    .then(res => {
-      console.log(res);
-      navigate('/Events');
-    })
-    .catch(err => console.log(err));
+  // function handleSubmit(event) {
+  //   event.preventDefault(); // Menghentikan behavior default dari form submission
+  //   axios.post('http://localhost:8000/donates', {
+  //     nama: nama,
+  //     email: email,
+  //     judul: judul,
+  //     date: date,
+  //     kategori: kategori,
+  //     deskripsi: deskripsi,
+  //     number: number,
+  //     alamat: alamat,
+  //     gambar: gambar
+  //   })
+  //   .then(res => {
+  //     console.log(res);
+  //     navigate('/Events');
+  //   })
+  //   .catch(err => console.log(err));
+  // };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    console.log('judul : ', judul);
+    console.log('nama : ', nama);
+    console.log('date : ', date);
+    console.log('number : ', number);
+    console.log('email : ', email);
+    console.log('kategori : ', kategori);
+    console.log('gambar : ', gambar);
+    console.log('alamat : ', alamat);
+    console.log('deskripsi : ', deskripsi);
+
+    const data = new FormData();
+    data.append('judul', judul);
+    data.append('nama', nama);
+    data.append('date', date);
+    data.append('number', number);
+    data.append('email', email);
+    data.append('kategori', kategori);
+    data.append('gambar', gambar);
+    data.append('alamat', alamat);
+    data.append('deskripsi', deskripsi);
+
+    try {
+      const response = await axios({
+        method: 'post',
+        url: 'http://localhost:8000/donates',
+        data
+      });
+  
+      console.log('post success: ', response);
+      // navigate('/Events'); // Uncomment this line if you want to navigate after successful submission
+    } catch (error) {
+      console.error('error: ', error);
+    }
   };
 
   return (
@@ -83,7 +119,7 @@ function Donates() {
             <div class="px-4 sm:px-0"></div>
           </div>
           <div class="mt-5 md:mt-0 md:col-span-2">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={onSubmit}>
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
                   <div class="grid grid-cols-6 gap-6">
@@ -95,7 +131,7 @@ function Donates() {
                         Judul Donasi
                       </label>
                       <input
-                        onChange={e => setJudul(e.target.value)}
+                        value={judul} onChange={(e) => setJudul(e.target.value)}
                         type="text"
                         name="judul"
                         id="judul"
@@ -112,7 +148,7 @@ function Donates() {
                         Nama Donatur
                       </label>
                       <input
-                        onChange={e => setNama(e.target.value)}
+                        value={nama} onChange={(e) => setNama(e.target.value)}
                         type="text"
                         name="nama"
                         id="nama"
@@ -129,7 +165,7 @@ function Donates() {
                         Tanggal Selesai Donasi
                       </label>
                       <input
-                        onChange={e => setDate(e.target.value)}
+                        value={date} onChange={(e) => setDate(e.target.value)}
                         type="date"
                         name="date"
                         id="date"
@@ -142,7 +178,7 @@ function Donates() {
                         No Hp
                       </label>
                       <input
-                        onChange={e => setNumber(e.target.value)}
+                        value={number} onChange={(e) => setNumber(e.target.value)}
                         type="tel"
                         name="number"
                         id="number"
@@ -158,7 +194,7 @@ function Donates() {
                         Email
                       </label>
                       <input
-                        onChange={e => setEmail(e.target.value)}
+                        value={email} onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         name="email"
                         id="email"
@@ -176,7 +212,7 @@ function Donates() {
                         Kategori Donasi
                       </label>
                       <select
-                        onChange={e => setKategori(e.target.value)}
+                        value={kategori} onChange={(e) => setKategori(e.target.value)}
                         id="kategori"
                         name="kategori"
                         autocomplete="kategori"
@@ -193,7 +229,7 @@ function Donates() {
                         Upload Gambar
                       </label>
                       <input
-                        onChange={e => setGambar(e.target.value)}
+                        onChange={(e) => setGambar(e.target.files[0])}
                         type="file"
                         name="gambar"
                         id="gambar"
@@ -208,7 +244,7 @@ function Donates() {
                         Alamat
                       </label>
                       <input
-                        onChange={e => setAlamat(e.target.value)}
+                        value={alamat} onChange={(e) => setAlamat(e.target.value)}
                         type="text"
                         name="alamat"
                         id="alamat"
@@ -224,7 +260,7 @@ function Donates() {
                         Deskripsi
                       </label>
                       <textarea
-                        onChange={e => setDeskripsi(e.target.value)}
+                        value={deskripsi} onChange={(e) => setDeskripsi(e.target.value)}
                         name="deskripsi"
                         id="deskripsi"
                         rows="8"
@@ -275,4 +311,3 @@ function Donates() {
 };
 
 export default Donates;
-
