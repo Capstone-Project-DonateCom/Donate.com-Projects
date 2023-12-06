@@ -6,80 +6,96 @@ import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import dhero1 from "../assets/dhero1.png";
+import dhero2 from "../assets/dhero2.png";
+import dhero3 from "../assets/dhero3.png";
 
 function Donates() {
-  const [judul, setJudul] = useState('');
-  const [nama, setNama] = useState('');
-  const [date, setDate] = useState('');
-  const [number, setNumber] = useState('');
-  const [email, setEmail] = useState('');
-  const [kategori, setKategori] = useState('');
-  const [gambar, setGambar] = useState('');
-  const [alamat, setAlamat] = useState('');
-  const [deskripsi, setDeskripsi] = useState('');
+  const [judul, setJudul] = useState("");
+  const [nama, setNama] = useState("");
+  const [date, setDate] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [kategori, setKategori] = useState("");
+  const [gambar, setGambar] = useState("");
+  const [alamat, setAlamat] = useState("");
+  const [deskripsi, setDeskripsi] = useState("");
   const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault(); // Menghentikan behavior default dari form submission
-    axios.post('http://localhost:8000/donates', {
-      nama: nama,
-      email: email,
-      judul: judul,
-      date: date,
-      kategori: kategori,
-      deskripsi: deskripsi,
-      number: number,
-      alamat: alamat,
-      gambar: gambar
-    })
-    .then(res => {
-      console.log(res);
-      navigate('/Events');
-    })
-    .catch(err => console.log(err));
-  };
+    axios
+      .post("http://localhost:8000/donates", {
+        nama: nama,
+        email: email,
+        judul: judul,
+        date: date,
+        kategori: kategori,
+        deskripsi: deskripsi,
+        number: number,
+        alamat: alamat,
+        gambar: gambar,
+      })
+      .then((res) => {
+        console.log(res);
+        navigate("/Events");
+      })
+      .catch((err) => console.log(err));
+  }
 
   return (
     <div>
       <NavBar />
       {/* Hero */}
+      <div className="flex flex-col md:flex-row items-center justify-center mt-32 space-y-8 md:space-y-0 md:space-x-8">
+    <div className="text-center">
+      <img src={dhero1} alt="Description 1" className="mx-auto" />
       <div>
-        <div className="flex justify-center pt-14">
-          <img className="mx-auto" src={gform} alt="GForm" />
-        </div>
-
-        <div className="flex justify-center text-3xl font-bold mt-28 ml-4">
-          <p className="mx-auto">Transparansi</p>
-          <p className="mx-auto">Terbagi Rata</p>
-          <p className="mx-auto">Dapat Dipercaya</p>
-        </div>
-
-        <div className="flex justify-center text-xl font-medium my-5 mx-auto">
-          <p className="text-center ml-7.5 w-80">
-            Transparan secara penuh dengan bentuk dan kuantitas donasi yang
-            diberikan.
-          </p>
-          <p className="text-center mx-auto w-80">
-            Donasi yang diberikan terbagi secara rata sesuai kebutuhan dan
-            prioritas.
-          </p>
-          <p className="text-center mx-auto w-80">
-            Dapat dipercaya karena donasi bersifat transparan dari berbagai
-            aspek.
-          </p>
-        </div>
-        <div className="flex justify-center pt-20">
-          <img src={t3} alt="pp" />
-        </div>
-        <div className="flex justify-center pt-40">
-          <p className="text-5xl font-bold">Form Buat Donasi</p>
-        </div>
+        <p className="font-bold text-3xl pt-10">
+          Transparansi sepenuhnya
+        </p>
+        <p className="font-medium text-xl">
+          Transparan dengan bentuk dan kuantitas donasi yang diberikan.
+        </p>
       </div>
+    </div>
+
+    <div className="text-center">
+      <img src={dhero2} alt="Description 2" className="mx-auto" />
+      <div>
+        <p className="font-bold text-3xl pt-10">
+          Transparansi sepenuhnya
+        </p>
+        <p className="font-medium text-xl">
+          Transparan dengan bentuk dan kuantitas donasi yang diberikan.
+        </p>
+      </div>
+    </div>
+
+    <div className="text-center">
+      <img src={dhero3} alt="Description 3" className="mx-auto" />
+      <div>
+        <p className="font-bold text-3xl pt-10">
+          Transparansi sepenuhnya
+        </p>
+        <p className="font-medium text-xl">
+          Transparan dengan bentuk dan kuantitas donasi yang diberikan.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="flex flex-col items-center justify-center pt-20">
+    <img src={t3} alt="pp" className="mx-auto" />
+  </div>
+
+  <div className="flex items-center justify-center pt-40">
+    <p className="text-5xl font-bold text-center">Form Buat Donasi</p>
+  </div>
       {/* Form */}
-      <div class="mt-10 sm:mt-0 ">
-        <div class="mx-[10rem] shadow-2xl md:grid md:grid-cols-1 md:gap-6 ">
-          <div class="md:col-span-1">
+      <div className="mt-10 sm:mt-0 ">
+        <div className="mx-4 md:mx-[10rem] shadow-2xl md:grid md:grid-cols-1 md:gap-6 ">
+          <div className="md:col-span-1">
             <div class="px-4 sm:px-0"></div>
           </div>
           <div class="mt-5 md:mt-0 md:col-span-2">
@@ -95,7 +111,7 @@ function Donates() {
                         Judul Donasi
                       </label>
                       <input
-                        onChange={e => setJudul(e.target.value)}
+                        onChange={(e) => setJudul(e.target.value)}
                         type="text"
                         name="first_name"
                         id="first_name"
@@ -112,7 +128,7 @@ function Donates() {
                         Nama Donatur
                       </label>
                       <input
-                        onChange={e => setNama(e.target.value)}
+                        onChange={(e) => setNama(e.target.value)}
                         type="text"
                         name="last_name"
                         id="last_name"
@@ -129,11 +145,11 @@ function Donates() {
                         Tanggal Selesai Donasi
                       </label>
                       <input
-                        onChange={e => setDate(e.target.value)}
+                        onChange={(e) => setDate(e.target.value)}
                         type="date"
                         name="tanggal_selesai_donasi"
                         id="tanggal_selesai_donasi"
-                        class="mt-1 focus:ring-[#00B0B9] focus:border-[#00B0B9] block w-full shadow-sm sm:text-sm border-black border-2 py-3"
+                        class="mt-1 focus:ring-[#00B0B9] focus:border-[#00B0B9] block w-full shadow-sm sm:text-sm border-black border-2 py-3 pr-5"
                       />
                     </div>
 
@@ -142,7 +158,7 @@ function Donates() {
                         No Hp
                       </label>
                       <input
-                        onChange={e => setNumber(e.target.value)}
+                        onChange={(e) => setNumber(e.target.value)}
                         type="tel"
                         name="no_hp"
                         id="no_hp"
@@ -158,7 +174,7 @@ function Donates() {
                         Email
                       </label>
                       <input
-                        onChange={e => setEmail(e.target.value)}
+                        onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         name="email"
                         id="email"
@@ -176,7 +192,7 @@ function Donates() {
                         Kategori Donasi
                       </label>
                       <select
-                        onChange={e => setKategori(e.target.value)}
+                        onChange={(e) => setKategori(e.target.value)}
                         id="country"
                         name="country"
                         autocomplete="country"
@@ -193,7 +209,7 @@ function Donates() {
                         Upload Gambar
                       </label>
                       <input
-                        onChange={e => setGambar(e.target.value)}
+                        onChange={(e) => setGambar(e.target.value)}
                         type="file"
                         className="mt-1 p-2 border border-black border-2 py-3 mr-10 block w-[30.8rem]"
                       ></input>
@@ -206,7 +222,7 @@ function Donates() {
                         Alamat
                       </label>
                       <input
-                        onChange={e => setAlamat(e.target.value)}
+                        onChange={(e) => setAlamat(e.target.value)}
                         type="text"
                         name="alamat"
                         id="alamat"
@@ -222,7 +238,7 @@ function Donates() {
                         Deskripsi
                       </label>
                       <textarea
-                        onChange={e => setDeskripsi(e.target.value)}
+                        onChange={(e) => setDeskripsi(e.target.value)}
                         name="deskripsi"
                         id="deskripsi"
                         rows="8"
@@ -251,7 +267,7 @@ function Donates() {
           <div className="w-[25%] h-[25%] py-[5rem] mx-[8rem]">
             <img className="" src={logo2} />
           </div>
-          <div className="mt-[5rem] ml-[13rem] mr-[5rem]">
+          <div className="mt-[5rem] ml-[9rem] mr-[5rem]">
             <p className="text-white mb-[2rem] font-bold">Menu</p>
             <p className="text-white">Home</p>
             <p className="text-white">Events</p>
@@ -270,6 +286,6 @@ function Donates() {
       </div>
     </div>
   );
-};
+}
 
 export default Donates;

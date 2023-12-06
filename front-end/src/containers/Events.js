@@ -121,7 +121,7 @@ function Events() {
           <div className="w-[25%] h-[25%] py-[5rem] mx-[8rem]">
             <img className="" src={logo2} />
           </div>
-          <div className="mt-[5rem] ml-[13rem] mr-[5rem]">
+          <div className="mt-[5rem] ml-[9rem] mr-[5rem]">
             <p className="text-white mb-[2rem] font-bold">Menu</p>
             <p className="text-white">Home</p>
             <p className="text-white">Events</p>
