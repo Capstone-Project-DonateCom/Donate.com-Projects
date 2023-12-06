@@ -16,27 +16,7 @@ function Donates() {
   const [gambar, setGambar] = useState('');
   const [alamat, setAlamat] = useState('');
   const [deskripsi, setDeskripsi] = useState('');
-  // const navigate = useNavigate();
-
-  // function handleSubmit(event) {
-  //   event.preventDefault(); // Menghentikan behavior default dari form submission
-  //   axios.post('http://localhost:8000/donates', {
-  //     nama: nama,
-  //     email: email,
-  //     judul: judul,
-  //     date: date,
-  //     kategori: kategori,
-  //     deskripsi: deskripsi,
-  //     number: number,
-  //     alamat: alamat,
-  //     gambar: gambar
-  //   })
-  //   .then(res => {
-  //     console.log(res);
-  //     navigate('/Events');
-  //   })
-  //   .catch(err => console.log(err));
-  // };
+  const navigate = useNavigate();
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -70,7 +50,8 @@ function Donates() {
       });
   
       console.log('post success: ', response);
-      // navigate('/Events'); // Uncomment this line if you want to navigate after successful submission
+      navigate('/Events');
+
     } catch (error) {
       console.error('error: ', error);
     }

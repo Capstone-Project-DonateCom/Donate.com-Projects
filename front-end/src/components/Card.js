@@ -30,6 +30,8 @@ const Card = ({ poster, title, description, labelDate, location, id }) => {
         </div>
       </div>
     </div>
+
+    
   );
 };
 
