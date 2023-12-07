@@ -5,6 +5,8 @@ import t3 from "../assets/t3.png";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+import { nanoid } from "nanoid"; // Impor nanoid
 
 function Donates() {
   const [judul, setJudul] = useState('');
@@ -21,6 +23,9 @@ function Donates() {
   const onSubmit = async (e) => {
     e.preventDefault();
 
+    const uniqueID = nanoid();
+
+    console.log('id : ', uniqueID);
     console.log('judul : ', judul);
     console.log('nama : ', nama);
     console.log('date : ', date);
@@ -32,6 +37,7 @@ function Donates() {
     console.log('deskripsi : ', deskripsi);
 
     const data = new FormData();
+    data.append('id', uniqueID); // Sertakan ID unik ke dalam data yang dikirim
     data.append('judul', judul);
     data.append('nama', nama);
     data.append('date', date);
@@ -46,7 +52,10 @@ function Donates() {
       const response = await axios({
         method: 'post',
         url: 'http://localhost:8000/donates',
-        data
+        data,
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
       });
   
       console.log('post success: ', response);

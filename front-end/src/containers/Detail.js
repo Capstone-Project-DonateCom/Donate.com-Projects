@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import NavBar from "../components/navbar/Navbar";
-import tese from "../assets/test.jpg";
+import test from "../assets/test.jpg";
 import pales from "../assets/pales.jpeg";
 import logoLocation from ".././assets/Location.png";
 import WA from ".././assets/WA.png";
