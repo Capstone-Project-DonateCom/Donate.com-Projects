@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 const Card = ({ poster, title, description, labelDate, location, id }) => {
   const navigate = useNavigate();
-  const handleDetail = (idEvents) => {
-    navigate(`/events/${idEvents}`);
+  const handleDetail = (id) => {
+    navigate(`/events/${id}`);
   };
   return (
     <div className="flex flex-col p-5 bg-white rounded-xl w-fit mx-auto">

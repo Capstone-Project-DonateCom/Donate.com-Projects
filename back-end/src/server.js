@@ -16,7 +16,7 @@ const multure = require('multer');
 const path = require('path');
 
 const storage = multure.diskStorage({
-  destination: './src/image/',
+  destination: './src/image',
   // eslint-disable-next-line arrow-body-style
   filename: (req, file, cb) => {
     return cb(null, `${file.filename}_${Date.now()}${path.extname(file.originalname)}`);
@@ -25,8 +25,9 @@ const storage = multure.diskStorage({
 
 const app = express();
 app.use(express.json());
-
 app.use(cors());
+app.use(express.static('./src'));
+
 const port = 8000;
 
 const upload = multure({
@@ -48,9 +49,10 @@ app.get('/', (req, res) => {
   });
 });
 
-app.post('/donates', upload.single('image'), (req, res) => {
-  const sql = 'INSERT INTO donasi (`nama_donatur`, `email`, `judul_donasi`, `batas_donasi`, `kategori_donasi`, `deskripsi_donasi`, `no_telepon`, `alamat`, `poster`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+app.post('/donates', upload.single('gambar'), (req, res) => {
+  const sql = 'INSERT INTO donasi (`id_donasi`, `nama_donatur`, `email`, `judul_donasi`, `batas_donasi`, `kategori_donasi`, `deskripsi_donasi`, `no_telepon`, `alamat`, `poster`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
   const values = [
+    req.body.id,
     req.body.nama,
     req.body.email,
     req.body.judul,

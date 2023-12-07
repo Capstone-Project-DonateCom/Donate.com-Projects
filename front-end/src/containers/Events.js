@@ -12,9 +12,16 @@ function Events() {
   useEffect(() => {
     axios
       .get("http://localhost:8000/")
-      .then((res) => setEvents(res.data))
+      .then((res) => {
+        if (Array.isArray(res.data)) { // Memastikan res.data adalah array
+          setEvents(res.data);
+        } else {
+          console.error("Data yang diterima bukanlah array:", res.data);
+        }
+      })
       .catch((err) => console.log(err));
-  });
+  }, []); // Menambahkan array kosong sebagai argumen kedua useEffect
+  
   const dataAwal = [
     {
       imageAwal:
@@ -56,7 +63,7 @@ function Events() {
     },
   ];
   const data = events.map((event) => ({
-    image: event.poster,
+    poster: `http://localhost:8000/image/${event.poster}`,
     title: event.judul_donasi,
     description: event.deskripsi_donasi,
     labelDate: event.batas_donasi,
@@ -102,11 +109,11 @@ function Events() {
             )
           )}
           {data.map(
-            ({ description, image, labelDate, location, title }, index) => (
+            ({ poster, description, labelDate, location, title }, index) => (
               <Card
                 key={index}
+                poster={poster}
                 description={description}
-                image={image}
                 labelDate={labelDate}
                 location={location}
                 title={title}
