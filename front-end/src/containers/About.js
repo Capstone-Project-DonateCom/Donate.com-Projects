@@ -4,10 +4,10 @@ import t3 from "../assets/t3.png";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
 import tese from "../assets/test.jpg";
-import FDimas from "../assets/Fdimas.jpg";
-import FRian from "../assets/Frian.jpg";
+import FDimas from "../assets/Fdimas2.jpg";
+import FRian from "../assets/Frian2.jpg";
 import FReza from "../assets/Freza.png";
-import FYunus from "../assets/Fyunus.jpeg";
+import FYunus from "../assets/Fyunus2.jpg";
 import FBintang from "../assets/Fbintang.jpg";
 
 const About = () => {

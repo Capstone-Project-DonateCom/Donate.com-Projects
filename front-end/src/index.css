@@ -7,3 +7,29 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-left {
+  animation: slideInFromLeft 1s ease-out;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-right {
+  animation: slideInFromRight 1s ease-out;
+}

@@ -10,6 +10,8 @@ import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
 import bulet from "../assets/bulet.png";
 import bgfaq from "../assets/bgfaq.png";
+import "../index.css";
+
 
 const Homepage = () => {
   return (
@@ -17,33 +19,35 @@ const Homepage = () => {
       <Navbar />
       {/* Hero */}
       <div className="flex flex-col md:flex-row mx-auto">
-        <div className="md:w-1/2 font-bold">
-          <div className="max-w-[800px] md:ml-40 mt-8 md:mt-56 leading-[55px]">
+        <div className="animation-container md:w-1/2 font-bold">
+          <div className="animate-left max-w-[800px] md:ml-40 mt-8 md:mt-56 leading-[55px]">
             <p className="text-black text-3xl md:text-5xl">
               Mari bantu <span className="text-[#00B0B9]">masyarakat,</span>{" "}
               buat perubahan <span className="text-[#00B0B9]">besar</span> dan
               bantu <span className="text-[#00B0B9]">dunia</span> ini!
             </p>
           </div>
-          <div className="mt-4 md:ml-40 max-w-[600px]">
+          <div className="animate-left mt-4 md:ml-40 max-w-[600px]">
             <p className="text-black text-xl md:text-2xl font-medium leading-[30px]">
               Ketika Anda berbagi dengan orang lain sebagian dari apa yang Anda
               miliki, apa yang tersisa akan berlipat ganda dan bertambah.
             </p>
           </div>
-          <div className="md:pl-40 pt-7">
+          <div className="animate-left md:pl-40 pt-7">
             <button className="bg-[#00B0B9] rounded-xl text-lg md:text-2xl px-5 py-2 text-white">
               Donasi Sekarang!
             </button>
           </div>
         </div>
-        <div className="md:w-1/2 mt-8 md:mt-0">
-          <img className="w-full" src={hero} alt="Hero" />
+        <div className="animation-container md:flex">
+          <div className="md:w mt-8 md:mt-0">
+            <img className="animate-right w-full" src={hero} alt="Hero" />
+          </div>
         </div>
       </div>
 
       {/* Selamat Datang */}
-      <div className="flex mt-40 ">
+      <div className="flex mt-40 scroll-animation">
         <div className="w-1/2 py-20">
           <div>
             <div className="bg-[#00B0B9] rounded-md py-10 mr">
@@ -72,14 +76,15 @@ const Homepage = () => {
               donasi kami.
             </p>
             <div className="mt-4">
-              <button className="bg-[#00B0B9] text-white ml-40 px-3 py-3 rounded-[0.5rem] font-semibold text-xl ">
+              <button className="bg-[#00B0B9] text-white ml-40 px-3 py-3 rounded-[0.5rem] font-semibold text-xl">
                 <p className="text-xl"> Detail &#62;</p>
               </button>
             </div>
           </div>
         </div>
-        <div className=" w-[50%] pl-20 ">
-          <img src={hero2} />
+
+        <div className="w-[50%] pl-20">
+          <img src={hero2} alt="Hero Image" />
         </div>
       </div>
 
@@ -123,31 +128,6 @@ const Homepage = () => {
       </div>
 
       {/* FAQ */}
-      {/* <div>
-        <div className="flex justify-center pt-40 text-[3rem] font-bold pb-20">
-          <p>FAQ</p>
-        </div>
-        <div className="border border-black p-4 mx-48 py-8 rounded-[1rem] text-[1.5rem] my-3">
-          <p className="font-bold mx-10">Apa itu aplikasi donate.com?</p>
-        </div>
-        <div className="border border-black p-4 mx-48 py-8 rounded-[1rem] text-[1.5rem] my-3">
-          <p className="font-bold mx-10">
-            Bagaimana penyalur memberikan donasinya?
-          </p>
-        </div>
-        <div className="border border-black p-4 mx-48 py-8 rounded-[1rem] text-[1.5rem] my-3">
-          <p className="font-bold mx-10">
-            Dalam bentuk apa saja donasi yang diberikan?
-          </p>
-        </div>
-        <div className="border border-black p-4 mx-48 py-8 rounded-[1rem] text-[1.5rem] my-3">
-          <p className="font-bold mx-10">
-            Bagaimana cara melihat berita tentang kebutuhan donasi?
-          </p>
-        </div>
-      </div> */}
-
-      {/* FAQ */}
 
       <ul className="max-w-6xl mx-auto mt-40 divide-y  shadow shadow-blue-600 rounded-xl">
         <li>
@@ -171,12 +151,17 @@ const Homepage = () => {
               </svg>
             </summary>
 
-            <article className="px-10 pb-4">
+            <article className="px-10 pb-4 font-medium">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
-                ipsum sapien. Vestibulum molestie porttitor augue vitae
-                vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique
-                tellus.
+                Donate.com merupakan platform untuk menyatukan para pembuka
+                donasi dengan individu yang ingin memberikan sumbangan. Dengan
+                fokus pada keterbukaan dan keterjangkauan, platform ini
+                menghadirkan kemudahan bagi yang ingin berbagi dan membantu,
+                menciptakan kesempatan bagi setiap individu untuk berpartisipasi
+                dalam memberikan dukungan kepada berbagai inisiatif dan penyebab
+                yang mereka pedulikan. Dengan Donate.com, kita semua dapat
+                berperan aktif dalam membentuk perubahan positif yang kita
+                inginkan dalam masyarakat.
               </p>
             </article>
           </details>
@@ -202,12 +187,24 @@ const Homepage = () => {
               </svg>
             </summary>
 
-            <article className="px-10 pb-4">
+            <article className="px-10 pb-4 font-medium">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
-                ipsum sapien. Vestibulum molestie porttitor augue vitae
-                vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique
-                tellus.
+                - Di halaman home, penyalur donasi dapat klik "Donasi
+                Sekarang!", yang akan mengarahkan ke halaman donates.
+              </p>
+              <p>
+                - Kemudian, terdapat formulir yang harus diisi dengan memasukkan
+                data yang diperlukan seperti judul donasi, kontak dan lainnya.
+              </p>
+              <p>
+                - Selanjutnya, penyalur donasi dapat mencentang checkbox "Saya
+                setuju dengan syarat dan ketentuan".
+              </p>
+              <p>- Lalu, klik "Submit" untuk mengirim formulir.</p>
+              <p>- Setelah itu, penyalur donasi diarahkan ke halaman Events.</p>
+              <p>
+                - Pada halaman Events ini, informasi donasi akan ditampilkan
+                secara lengkap.
               </p>
             </article>
           </details>
@@ -233,12 +230,12 @@ const Homepage = () => {
               </svg>
             </summary>
 
-            <article className="px-10 pb-4">
+            <article className="px-10 pb-4 font-medium">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
-                ipsum sapien. Vestibulum molestie porttitor augue vitae
-                vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique
-                tellus.
+                Berbagai bentuk donasi yang dapat diberikan, diantaranya berupa
+                sumbangan uang tunai, pakaian, makanan dan minuman, peralatan
+                medis, perlengkapan sekolah, perlengkapan darurat atau bantuan
+                logistik lainnya.
               </p>
             </article>
           </details>
@@ -247,7 +244,7 @@ const Homepage = () => {
           <details className="group">
             <summary className="flex items-center gap-3 px-4 py-3 font-bold marker:content-none hover:cursor-pointer">
               <span className="text-2xl my-4 ml-5">
-                Bagaimana cara melihat berita tentang kebutuhan donasi?
+                Bagaimana penerima donasi mengetahui donasi yang tersedia?
               </span>
               <svg
                 className="w-10 h-10 text-gray-500 transition group-open:rotate-90 ml-auto"
@@ -264,12 +261,48 @@ const Homepage = () => {
               </svg>
             </summary>
 
-            <article className="px-10 pb-4">
+            <article className="px-10 pb-4 font-medium">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
-                ipsum sapien. Vestibulum molestie porttitor augue vitae
-                vulputate. Aliquam nec ex maximus, suscipit diam vel, tristique
-                tellus.
+                - Penerima donasi dapat pergi ke halaman Events, disana terdapat
+                berbagai donasi yang sedang berlangsung.
+              </p>
+              <p>
+                - Penerima donasi dapat klik tombol "Details" untuk melihat
+                informasi lengkap seperti deskripsi donasi, kontak dan lainnya.
+              </p>
+              <p>
+                - Penerima donasi dapat menghubungi kontak yang tersedia untuk
+                berkomunikasi langsung dengan penyalur donasi untuk mendapatkan
+                informasi lebih rinci.
+              </p>
+            </article>
+          </details>
+        </li>
+        <li>
+          <details className="group">
+            <summary className="flex items-center gap-3 px-4 py-3 font-bold marker:content-none hover:cursor-pointer">
+              <span className="text-2xl my-4 ml-5">
+                Siapa saja yang dapat melakukan donasi?
+              </span>
+              <svg
+                className="w-10 h-10 text-gray-500 transition group-open:rotate-90 ml-auto"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                ></path>
+              </svg>
+            </summary>
+
+            <article className="px-10 pb-4 font-medium">
+              <p>
+                Siapa pun dapat berdonasi, baik itu individu, kelompok atau
+                komunitas, perusahaan, atau organisasi non-profit.
               </p>
             </article>
           </details>
