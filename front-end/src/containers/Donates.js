@@ -7,6 +7,10 @@ import sponsor from "../assets/sponsor.png";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { nanoid } from "nanoid"; // Impor nanoid
+import dhero1 from "../assets/dhero1.png";
+import dhero2 from "../assets/dhero2.png";
+import dhero3 from "../assets/dhero3.png";
+
 
 function Donates() {
   const [judul, setJudul] = useState('');
@@ -70,38 +74,51 @@ function Donates() {
     <div>
       <NavBar />
       {/* Hero */}
+      <div className="flex flex-col md:flex-row items-center justify-center mt-32 space-y-8 md:space-y-0 md:space-x-8">
+    <div className="text-center">
+      <img src={dhero1} alt="Description 1" className="mx-auto" />
       <div>
-        <div className="flex justify-center pt-14">
-          <img className="mx-auto" src={gform} alt="GForm" />
-        </div>
-
-        <div className="flex justify-center text-3xl font-bold mt-28 ml-4">
-          <p className="mx-auto">Transparansi</p>
-          <p className="mx-auto">Terbagi Rata</p>
-          <p className="mx-auto">Dapat Dipercaya</p>
-        </div>
-
-        <div className="flex justify-center text-xl font-medium my-5 mx-auto">
-          <p className="text-center ml-7.5 w-80">
-            Transparan secara penuh dengan bentuk dan kuantitas donasi yang
-            diberikan.
-          </p>
-          <p className="text-center mx-auto w-80">
-            Donasi yang diberikan terbagi secara rata sesuai kebutuhan dan
-            prioritas.
-          </p>
-          <p className="text-center mx-auto w-80">
-            Dapat dipercaya karena donasi bersifat transparan dari berbagai
-            aspek.
-          </p>
-        </div>
-        <div className="flex justify-center pt-20">
-          <img src={t3} alt="pp" />
-        </div>
-        <div className="flex justify-center pt-40">
-          <p className="text-5xl font-bold">Form Buat Donasi</p>
-        </div>
+        <p className="font-bold text-3xl pt-10">
+          Transparansi sepenuhnya
+        </p>
+        <p className="font-medium text-xl">
+          Transparan dengan bentuk dan kuantitas donasi yang diberikan.
+        </p>
       </div>
+    </div>
+
+    <div className="text-center">
+      <img src={dhero2} alt="Description 2" className="mx-auto" />
+      <div>
+        <p className="font-bold text-3xl pt-10">
+          Transparansi sepenuhnya
+        </p>
+        <p className="font-medium text-xl">
+          Transparan dengan bentuk dan kuantitas donasi yang diberikan.
+        </p>
+      </div>
+    </div>
+
+    <div className="text-center">
+      <img src={dhero3} alt="Description 3" className="mx-auto" />
+      <div>
+        <p className="font-bold text-3xl pt-10">
+          Transparansi sepenuhnya
+          </p>
+        <p className="font-medium text-xl">
+          Transparan dengan bentuk dan kuantitas donasi yang diberikan.
+        </p>
+      </div>
+    </div>
+  </div>
+
+    <div className="flex flex-col items-center justify-center pt-20">
+      <img src={t3} alt="pp" className="mx-auto" />
+    </div>
+
+    <div className="flex items-center justify-center pt-40">
+      <p className="text-5xl font-bold text-center">Form Untuk Donasi</p>
+    </div>
       {/* Form */}
       <div class="mt-10 sm:mt-0 ">
         <div class="mx-[10rem] shadow-2xl md:grid md:grid-cols-1 md:gap-6 ">

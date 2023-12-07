@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import NavBar from "../components/navbar/Navbar";
-import test from "../assets/test.jpg";
 import pales from "../assets/pales.jpeg";
 import logoLocation from ".././assets/Location.png";
 import WA from ".././assets/WA.png";
@@ -10,8 +9,9 @@ import logo2 from ".././assets/logo2.png";
 import sponsor from ".././assets/sponsor.png";
 import kiri from "../assets/Left.png";
 
+
 const Detail = () => {
-  const { id = 2 } = useParams();
+  const { id } = useParams();
   return (
     <div>
       <NavBar />
@@ -21,6 +21,7 @@ const Detail = () => {
             <img className="mr-4" src={kiri} />
             Kembali
           </button>
+          <h2>Detail Event with ID: {id}</h2>
         </div>
         <div className="bg-white w-[1200px] shadow-xl mx-auto px-4 py-2 rounded-xl justify-between items-center">
           <img
