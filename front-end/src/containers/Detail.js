@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import NavBar from "../components/navbar/Navbar";
 import pales from "../assets/pales.jpeg";
 import logoLocation from ".././assets/Location.png";
 import WA from ".././assets/WA.png";
@@ -8,41 +7,55 @@ import Gmail from ".././assets/Gmail.png";
 import logo2 from ".././assets/logo2.png";
 import sponsor from ".././assets/sponsor.png";
 import kiri from "../assets/Left.png";
+import axios from "axios";
 
 
 const Detail = () => {
-  const { id } = useParams();
+  const { id: id_donasi } = useParams();
+  const [eventDetail, setEventDetail] = useState({});
+  
+
+  useEffect(() => {
+    axios.get(`http://localhost:8000/events/${id_donasi}`)
+      .then(response => {
+        console.log("Response from server:", response.data);
+        setEventDetail(response.data); // Simpan detail acara yang diterima dari server
+      })
+      .catch(error => {
+        console.error("Terjadi kesalahan:", error);
+      });
+  }, [id_donasi]);
+
+  
   return (
     <div>
-      <NavBar />
       <div>
         <div>
-          <button className="font-bold ml-[14rem] pt-7 mb-7 text-[#00B0B9] text-3xl flex w-full items-center gap-x-2 ">
+          <button className="font-bold ml-[9.5rem] pt-5 mb-7 text-[#00B0B9] text-3xl flex w-full items-center gap-x-2 ">
             <img className="mr-4" src={kiri} />
             Kembali
           </button>
-          <h2>Detail Event with ID: {id}</h2>
         </div>
         <div className="bg-white w-[1200px] shadow-xl mx-auto px-4 py-2 rounded-xl justify-between items-center">
           <img
             className="rounded-xl px-9 w-[1200px] py-9 mx-auto flex items-center"
-            src={pales}
+            src={eventDetail.poster}
           />
           <div className="mx-auto">
             <p className="font-bold text-2xl ml-8">
-              Bantu Palestina, Ringankan Derita Bersama
+              {eventDetail.judul_donasi}
             </p>
             <p className="font-semibold text-xl ml-8 mt-2">
-              20 Okt - 25 Okt 2023
+            {eventDetail.batas_donasi}
             </p>
             <p className="text-[#00B0B9] text-xl ml-8 mt-2">
-              Solidaritas Anak Muda
+            {eventDetail.nama_donatur}
             </p>
             <div className="flex justify-between mt-auto">
               <div className="flex w-full items-center gap-x-2 mb-[2rem]">
                 <img className="ml-8 mt-2" src={logoLocation} />
                 <p className="text-[#00B0B9] font-medium text-xl mt-2 mb-2">
-                  Gaza, Palestina
+                {eventDetail.alamat}
                 </p>
               </div>
             </div>
@@ -51,17 +64,7 @@ const Detail = () => {
       </div>
       <div className="bg-white w-[1200px] shadow-xl mx-auto px-4 py-2 rounded-xl justify-between items-center mt-[3rem]">
         <p className="text-justify mt-6 px-4 py-2">
-          Kami mengajak Anda bergabung dalam kampanye kemanusiaan ini untuk
-          memberikan bantuan kepada rakyat Palestina yang sedang menghadapi
-          tantangan besar. Donasi finansial Anda akan memiliki dampak langsung
-          dalam menyediakan kebutuhan pokok, seperti makanan, air bersih, dan
-          perlengkapan medis. Selain itu, dana yang terkumpul juga akan
-          digunakan untuk membantu dalam rekonstruksi infrastruktur yang rusak
-          parah akibat konflik. Setiap kontribusi Anda, sekecil apapun, akan
-          membawa harapan dan kelegaan kepada mereka yang membutuhkan. Mari
-          bersama-sama menjadi perubahan positif dan membantu Palestina untuk
-          melangkah menuju masa depan yang lebih baik. Terima kasih atas
-          dukungan Anda yang berarti.
+        {eventDetail.deskripsi_donasi}
         </p>
         <p className="font-bold text-xl mt-6 mx-auto flex justify-center">
           Kontak untuk Donasi
@@ -70,9 +73,9 @@ const Detail = () => {
           <div className="text-center">
             <div className="flex items-center gap-x-4 mb-[5rem]">
               <img src={WA} alt="WhatsApp Logo" />
-              <p className="font-bold text-xl">088210376547</p>
+              <p className="font-bold text-xl">{eventDetail.no_telepon}</p>
               <img src={Gmail} alt="Gmail Logo" />
-              <p className="font-bold text-xl">mandiryanto28@gmail.com</p>
+              <p className="font-bold text-xl">{eventDetail.email}</p>
             </div>
           </div>
         </div>
@@ -103,6 +106,6 @@ const Detail = () => {
       </div>
     </div>
   );
-};
+  };
 
 export default Detail;

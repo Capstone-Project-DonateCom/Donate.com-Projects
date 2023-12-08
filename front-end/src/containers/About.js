@@ -1,9 +1,7 @@
 import React from "react";
-import NavBar from "../components/navbar/Navbar";
 import t3 from "../assets/t3.png";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
-import tese from "../assets/test.jpg";
 import FDimas from "../assets/Fdimas.jpg";
 import FRian from "../assets/Frian.jpg";
 import FReza from "../assets/Freza.png";
@@ -13,7 +11,6 @@ import FBintang from "../assets/Fbintang.jpg";
 const About = () => {
   return (
     <div>
-      <NavBar />
       <div>
         <div>
           <p className="flex justify-center text-5xl font-bold pt-40">About</p>

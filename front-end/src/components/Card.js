@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState, useEffect }from "react";
 import logoLocation from ".././assets/Location.png";
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Card = ({ poster, title, description, labelDate, location, id }) => {
-  const navigate = useNavigate();
-  const handleDetail = (id) => {
-    navigate(`/events/${id}`);
-  };
-  return (
+
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    // Mengambil daftar event dari server
+    axios.get('http://localhost:8000/')
+      .then(response => {
+        setEvents(response.data); // Menyimpan daftar event yang diterima dari server
+      })
+      .catch(error => {
+        console.error("Terjadi kesalahan:", error);
+      });
+  }, []);
+  
+  return (  
     <div className="flex flex-col p-5 bg-white rounded-xl w-fit mx-auto">
       <div>
         <img className="" src={poster} alt="image" />
@@ -21,12 +32,11 @@ const Card = ({ poster, title, description, labelDate, location, id }) => {
             <img src={logoLocation} alt="location" />
             <p className="font-semibold text-sm">{location}</p>
           </div>
-          <button
-            onClick={() => handleDetail(id)}
-            className="rounded-lg px-6 py-2 text-white bg-[#00B0B9]"
-          >
-            Details
-          </button>
+          <div>
+            <Link to={`/events/${id}`}>
+              <button>Details</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/navbar/Navbar";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
 import searchIcon from "../assets/Search.png";
@@ -68,11 +67,11 @@ function Events() {
     description: event.deskripsi_donasi,
     labelDate: event.batas_donasi,
     location: event.alamat,
+    id: event.id_donasi
   }));
 
   return (
     <div>
-      <Navbar />
       <div className="bg-[#00B0B9] px-8 py-12 mx-8 rounded-3xl">
         <div className="flex">
           <form className="flex bg-white min-w-[280px] mx-auto px-4 py-2 rounded-md justify-between items-center gap-x-2">
@@ -108,18 +107,17 @@ function Events() {
               />
             )
           )}
-          {data.map(
-            ({ poster, description, labelDate, location, title }, index) => (
-              <Card
-                key={index}
-                poster={poster}
-                description={description}
-                labelDate={labelDate}
-                location={location}
-                title={title}
-              />
-            )
-          )}
+          {data.map((event, index) => (
+            <Card
+              key={index}
+              poster={event.poster}
+              description={event.description}
+              labelDate={event.labelDate}
+              location={event.location}
+              title={event.title}
+              id={event.id} 
+            />
+          ))}
         </div>
       </div>
       {/* Footer */}

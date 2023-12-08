@@ -5,7 +5,6 @@ import house from "../assets/house.png";
 import hospital from "../assets/Hospital.png";
 import Graduation from "../assets/Graduation.png";
 import Cash from "../assets/Cash.png";
-import Navbar from "../components/navbar/Navbar";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
 import bulet from "../assets/bulet.png";
@@ -14,7 +13,6 @@ import bgfaq from "../assets/bgfaq.png";
 const Homepage = () => {
   return (
     <div>
-      <Navbar />
       {/* Hero */}
       <div className="flex flex-col md:flex-row mx-auto">
         <div className="md:w-1/2 font-bold">

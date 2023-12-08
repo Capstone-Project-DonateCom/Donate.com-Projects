@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import NavBar from "../components/navbar/Navbar";
 import gform from "../assets/gform.png";
 import t3 from "../assets/t3.png";
 import logo2 from "../assets/logo2.png";
@@ -72,7 +71,6 @@ function Donates() {
 
   return (
     <div>
-      <NavBar />
       {/* Hero */}
       <div className="flex flex-col md:flex-row items-center justify-center mt-32 space-y-8 md:space-y-0 md:space-x-8">
     <div className="text-center">
