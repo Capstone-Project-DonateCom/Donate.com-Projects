@@ -74,7 +74,7 @@ function Donates() {
     <div>
       <NavBar />
       {/* Hero */}
-      <div className="flex flex-col md:flex-row items-center justify-center mt-32 space-y-8 md:space-y-0 md:space-x-8">
+      <div className="flex flex-col md:flex-row items-center justify-center mt-32 space-y-8 md:space-y-0 md:space-x-8 min-w-[375px]">
     <div className="text-center">
       <img src={dhero1} alt="Description 1" className="mx-auto" />
       <div>
@@ -112,21 +112,21 @@ function Donates() {
     </div>
   </div>
 
-    <div className="flex flex-col items-center justify-center pt-20">
+    <div className="flex flex-col items-center justify-center pt-20 min-w-[375px] ">
       <img src={t3} alt="pp" className="mx-auto" />
     </div>
 
-    <div className="flex items-center justify-center pt-40">
+    <div className="flex items-center justify-center pt-40 min-w-[375px]">
       <p className="text-5xl font-bold text-center">Form Untuk Donasi</p>
     </div>
       {/* Form */}
-      <div class="mt-10 sm:mt-0 ">
-        <div class="mx-[10rem] shadow-2xl md:grid md:grid-cols-1 md:gap-6 ">
+      <div class="mt-10 sm:mt-0 flex justify-center">
+        <div class="shadow-2xl md:grid md:grid-cols-1 md:gap-6 min-w-[375px] w-full">
           <div class="md:col-span-1">
             <div class="px-4 sm:px-0"></div>
           </div>
           <div class="mt-5 md:mt-0 md:col-span-2">
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} class="min-w-[375px] mx-auto">
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
                   <div class="grid grid-cols-6 gap-6">

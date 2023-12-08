@@ -12,13 +12,12 @@ import bulet from "../assets/bulet.png";
 import bgfaq from "../assets/bgfaq.png";
 import "../index.css";
 
-
 const Homepage = () => {
   return (
     <div>
       <Navbar />
       {/* Hero */}
-      <div className="flex flex-col md:flex-row mx-auto">
+      <div className="flex flex-col md:flex-row mx-auto min-w-[375px]">
         <div className="animation-container md:w-1/2 font-bold">
           <div className="animate-left max-w-[800px] md:ml-40 mt-8 md:mt-56 leading-[55px]">
             <p className="text-black text-3xl md:text-5xl">
@@ -47,7 +46,7 @@ const Homepage = () => {
       </div>
 
       {/* Selamat Datang */}
-      <div className="flex mt-40 scroll-animation">
+      {/* <div className="flex mt-40 scroll-animation">
         <div className="w-1/2 py-20">
           <div>
             <div className="bg-[#00B0B9] rounded-md py-10 mr">
@@ -86,10 +85,57 @@ const Homepage = () => {
         <div className="w-[50%] pl-20">
           <img src={hero2} alt="Hero Image" />
         </div>
+      </div> */}
+
+      <div className="flex flex-col md:flex-row mt-40 scroll-animation min-w-[375px]">
+        <div className="w-full md:w-1/2 py-4 md:py-20 min-w-[375px]">
+          <div>
+            <div className="bg-[#00B0B9] rounded-md py-4 md:py-10 mx-4 md:mx-0">
+              <p className="ml-40 text-white text-2xl md:text-5xl font-bold">
+                Selamat Datang di
+              </p>
+            </div>
+            <div className="ml-40">
+              <p className="text-[#00B0B9] text-2xl md:text-5xl font-semibold mt-5 ml-4 md:ml-0">
+                Donate.com
+              </p>
+            </div>
+          </div>
+          <div className="ml-40">
+            <div>
+              <hr className="h-1 bg-black mt-4 mx-4 md:mx-0"></hr>
+            </div>
+            <div>
+              <p className="ml-4 md:ml-0 font-bold text-lg md:text-base mt-5 leading-[35px]">
+                Menyatukan Hati Baik, Membuat Perbedaan Bersama!
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="ml-40 mt-5">
+              <p className="ml-4 md:ml-0 text-justify text-base md:text-lg">
+                Temukan kebaikan di Donate.com, tempat di mana komunitas pembuat
+                donasi dan pendonasi saling mendukung. Proyek donasi beragam
+                menanti Anda, dari kesehatan hingga pendidikan. Transparansi,
+                keamanan, dan keterlibatan personal adalah inti dari pengalaman
+                donasi kami.
+              </p>
+              <div className="mt-4 ml-4 md:ml-0">
+                <button className="bg-[#00B0B9] text-white px-3 py-2 md:px-4 md:py-3 rounded-[0.5rem] font-semibold text-lg md:text-xl">
+                  <p> Detail &#62;</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full md:w-[50%] mt-4 md:mt-0 pl-4 md:pl-8">
+          <img className="w-full" src={hero2} alt="Hero Image" />
+        </div>
       </div>
 
       {/* Kategori Donasi */}
-      <div>
+      {/* <div>
         <div className="bg-[#00B0B9] h-[700px]  rounded-[5rem]">
           <p className="text-white pt-20 pl-40 text-[3rem] font-bold">
             Kategori Donasi
@@ -125,11 +171,11 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* FAQ */}
 
-      <ul className="max-w-6xl mx-auto mt-40 divide-y  shadow shadow-blue-600 rounded-xl">
+      <ul className="max-w-6xl mx-auto mt-40 divide-y  shadow shadow-blue-600 rounded-xl min-w-[375px]">
         <li>
           <details className="group">
             <summary className="flex items-center gap-3 px-4 py-3 font-bold marker:content-none hover:cursor-pointer">
@@ -310,7 +356,7 @@ const Homepage = () => {
       </ul>
 
       {/* Footer */}
-      <div className="bg-[#00B0B9]">
+      <div className="bg-[#00B0B9] min-w-[375px]">
         <div className=" mt-[10rem] h-[272px] flex">
           <div className="w-[25%] h-[25%] py-[5rem] mx-[8rem]">
             <img className="" src={logo2} />
