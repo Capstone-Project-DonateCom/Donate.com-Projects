@@ -85,24 +85,6 @@ app.get('/events/:id', (req, res) => {
 });
 
 // Endpoint untuk mengambil foto berdasarkan ID donasi
-app.get('/donasi/:id/foto', (req, res) => {
-  const idDonasi = req.params.id;
-  const sql = 'SELECT foto FROM donasi WHERE id_donasi = ?';
-  db.query(sql, idDonasi, (err, result) => {
-    if (err) {
-      console.error('Error saat mengambil foto:', err);
-      return res.status(500).json({ error: 'Terjadi kesalahan saat mengambil foto.' });
-    }
-
-    if (result.length === 0) {
-      return res.status(404).json({ message: 'Foto tidak ditemukan.' });
-    }
-
-    const foto = result[0].foto;
-    res.set('Content-Type', 'image/jpeg/png'); // Tentukan tipe konten (misalnya, JPEG)
-    return res.send(foto); // Kirim foto sebagai respons
-  });
-});
 
 app.listen(port, () => {
   console.log(`Server sudah menyala pada port ${port}`);

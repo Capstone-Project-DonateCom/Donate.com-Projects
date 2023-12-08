@@ -13,7 +13,8 @@ import axios from "axios";
 const Detail = () => {
   const { id: id_donasi } = useParams();
   const [eventDetail, setEventDetail] = useState({});
-  
+  const [eventImage, setEventImage] = useState('');
+
 
   useEffect(() => {
     axios.get(`http://localhost:8000/events/${id_donasi}`)
@@ -39,7 +40,7 @@ const Detail = () => {
         <div className="bg-white w-[1200px] shadow-xl mx-auto px-4 py-2 rounded-xl justify-between items-center">
           <img
             className="rounded-xl px-9 w-[1200px] py-9 mx-auto flex items-center"
-            src={eventDetail.poster}
+            src={`http://localhost:8000/image/${eventDetail.poster}`}
           />
           <div className="mx-auto">
             <p className="font-bold text-2xl ml-8">
