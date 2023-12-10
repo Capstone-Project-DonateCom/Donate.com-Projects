@@ -81,7 +81,7 @@ function Donates() {
         <p className="font-bold text-3xl pt-10">
           Transparansi sepenuhnya
         </p>
-        <p className="font-medium text-xl">
+        <p className="font-medium text-xl pt-5">
           Transparan dengan bentuk dan kuantitas donasi yang diberikan.
         </p>
       </div>
@@ -91,10 +91,10 @@ function Donates() {
       <img src={dhero2} alt="Description 2" className="mx-auto" />
       <div>
         <p className="font-bold text-3xl pt-10">
-          Transparansi sepenuhnya
+        Terbagi rata
         </p>
-        <p className="font-medium text-xl">
-          Transparan dengan bentuk dan kuantitas donasi yang diberikan.
+        <p className="font-medium text-xl pt-5">
+        Donasi yang diberikan terbagi secara rata sesuai kebutuhan.
         </p>
       </div>
     </div>
@@ -103,10 +103,10 @@ function Donates() {
       <img src={dhero3} alt="Description 3" className="mx-auto" />
       <div>
         <p className="font-bold text-3xl pt-10">
-          Transparansi sepenuhnya
+        Dapat dipercaya
           </p>
-        <p className="font-medium text-xl">
-          Transparan dengan bentuk dan kuantitas donasi yang diberikan.
+        <p className="font-medium text-xl pt-5">
+        Dapat dipercaya karena donasi bersifat transparansi dari berbagai aspek.
         </p>
       </div>
     </div>
@@ -133,7 +133,7 @@ function Donates() {
                     <div class="col-span-6 sm:col-span-3">
                       <label
                         for="first_name"
-                        class="block text-sm font-medium "
+                        class="block text-lg font-medium "
                       >
                         Judul Donasi
                       </label>
@@ -150,7 +150,7 @@ function Donates() {
                     <div class="col-span-6 sm:col-span-3">
                       <label
                         for="last_name"
-                        class="block text-sm font-medium text-gray-700"
+                        class="block text-lg font-medium text-gray-700"
                       >
                         Nama Donatur
                       </label>
@@ -167,7 +167,7 @@ function Donates() {
                     <div className="col-span-6 sm:col-span-3">
                       <label
                         for="tanggal_selesai_donasi"
-                        class="block text-sm font-medium mb-1"
+                        class="block text-lg font-medium mb-1"
                       >
                         Tanggal Selesai Donasi
                       </label>
@@ -181,7 +181,7 @@ function Donates() {
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                      <label for="no_hp" class="block text-sm font-medium">
+                      <label for="no_hp" class="block text-lg font-medium">
                         No Hp
                       </label>
                       <input
@@ -197,7 +197,7 @@ function Donates() {
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                      <label for="email" class="block text-sm font-medium">
+                      <label for="email" class="block text-lg font-medium">
                         Email
                       </label>
                       <input
@@ -214,7 +214,7 @@ function Donates() {
                     <div className="col-span-6 sm:col-span-3">
                       <label
                         for="country"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-lg font-medium text-gray-700"
                       >
                         Kategori Donasi
                       </label>
@@ -232,7 +232,7 @@ function Donates() {
                       </select>
                     </div>
                     <div className="col-span-6 sm:col-span-6">
-                      <label className="block text-2xl font-medium text-sm ">
+                      <label className="block text-2xl font-medium text-lg ">
                         Upload Gambar
                       </label>
                       <input
@@ -246,7 +246,7 @@ function Donates() {
                     <div className="col-span-6 sm:col-span-6">
                       <label
                         for="alamat"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-lg font-medium text-gray-700"
                       >
                         Alamat
                       </label>
@@ -262,7 +262,7 @@ function Donates() {
                     <div className="col-span-6 sm:col-span-6">
                       <label
                         htmlFor="deskripsi"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-lg font-medium text-gray-700"
                       >
                         Deskripsi
                       </label>
@@ -281,7 +281,7 @@ function Donates() {
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <button
                   type="submit"
-                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#00B0B9] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-2xl font-medium rounded-md text-white bg-[#00B0B9] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Submit
                 </button>

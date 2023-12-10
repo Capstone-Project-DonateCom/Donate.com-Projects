@@ -106,14 +106,14 @@ const Homepage = () => {
               <hr className="h-1 bg-black mt-4 mx-4 md:mx-0"></hr>
             </div>
             <div>
-              <p className="ml-4 md:ml-0 font-bold text-lg md:text-base mt-5 leading-[35px]">
+              <p className="ml-4 md:ml-0 font-bold text-lg md:text-xl mt-5 leading-[35px]">
                 Menyatukan Hati Baik, Membuat Perbedaan Bersama!
               </p>
             </div>
           </div>
           <div>
             <div className="ml-40 mt-5">
-              <p className="ml-4 md:ml-0 text-justify text-base md:text-lg">
+              <p className="ml-4 md:ml-0 text-justify text-base md:text-xl">
                 Temukan kebaikan di Donate.com, tempat di mana komunitas pembuat
                 donasi dan pendonasi saling mendukung. Proyek donasi beragam
                 menanti Anda, dari kesehatan hingga pendidikan. Transparansi,
