@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import pales from "../assets/pales.jpeg";
 import logoLocation from ".././assets/Location.png";
 import WA from ".././assets/WA.png";
 import Gmail from ".././assets/Gmail.png";
@@ -8,13 +7,12 @@ import logo2 from ".././assets/logo2.png";
 import sponsor from ".././assets/sponsor.png";
 import kiri from "../assets/Left.png";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 const Detail = () => {
   const { id: id_donasi } = useParams();
   const [eventDetail, setEventDetail] = useState({});
-  const [eventImage, setEventImage] = useState('');
-
 
   useEffect(() => {
     axios.get(`http://localhost:8000/events/${id_donasi}`)
@@ -32,10 +30,12 @@ const Detail = () => {
     <div>
       <div>
         <div>
-          <button className="font-bold ml-[9.5rem] pt-5 mb-7 text-[#00B0B9] text-3xl flex w-full items-center gap-x-2 ">
-            <img className="mr-4" src={kiri} />
-            Kembali
-          </button>
+          <Link to="/events">
+            <button className="font-bold ml-[9.5rem] pt-5 mb-7 text-[#00B0B9] text-xl flex w-full items-center gap-x-2 ">
+              <img className="mr-4" src={kiri} />
+                Kembali
+            </button>
+          </Link>
         </div>
         <div className="bg-white w-[1200px] shadow-xl mx-auto px-4 py-2 rounded-xl justify-between items-center">
           <img

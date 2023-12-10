@@ -72,14 +72,14 @@ function Donates() {
   return (
     <div>
       {/* Hero */}
-      <div className="flex flex-col md:flex-row items-center justify-center mt-32 space-y-8 md:space-y-0 md:space-x-8">
+      <div className="flex flex-col md:flex-row items-center justify-center mt-32 space-y-8 md:space-y-0 md:space-x-8 min-w-[375px]">
     <div className="text-center">
       <img src={dhero1} alt="Description 1" className="mx-auto" />
       <div>
         <p className="font-bold text-3xl pt-10">
           Transparansi sepenuhnya
         </p>
-        <p className="font-medium text-xl">
+        <p className="font-medium text-xl pt-5">
           Transparan dengan bentuk dan kuantitas donasi yang diberikan.
         </p>
       </div>
@@ -89,10 +89,10 @@ function Donates() {
       <img src={dhero2} alt="Description 2" className="mx-auto" />
       <div>
         <p className="font-bold text-3xl pt-10">
-          Transparansi sepenuhnya
+        Terbagi rata
         </p>
-        <p className="font-medium text-xl">
-          Transparan dengan bentuk dan kuantitas donasi yang diberikan.
+        <p className="font-medium text-xl pt-5">
+        Donasi yang diberikan terbagi secara rata sesuai kebutuhan.
         </p>
       </div>
     </div>
@@ -101,37 +101,37 @@ function Donates() {
       <img src={dhero3} alt="Description 3" className="mx-auto" />
       <div>
         <p className="font-bold text-3xl pt-10">
-          Transparansi sepenuhnya
+        Dapat dipercaya
           </p>
-        <p className="font-medium text-xl">
-          Transparan dengan bentuk dan kuantitas donasi yang diberikan.
+        <p className="font-medium text-xl pt-5">
+        Dapat dipercaya karena donasi bersifat transparansi dari berbagai aspek.
         </p>
       </div>
     </div>
   </div>
 
-    <div className="flex flex-col items-center justify-center pt-20">
+    <div className="flex flex-col items-center justify-center pt-20 min-w-[375px] ">
       <img src={t3} alt="pp" className="mx-auto" />
     </div>
 
-    <div className="flex items-center justify-center pt-40">
+    <div className="flex items-center justify-center pt-40 min-w-[375px]">
       <p className="text-5xl font-bold text-center">Form Untuk Donasi</p>
     </div>
       {/* Form */}
-      <div class="mt-10 sm:mt-0 ">
-        <div class="mx-[10rem] shadow-2xl md:grid md:grid-cols-1 md:gap-6 ">
+      <div class="sm:mt-0 flex justify-center" style={{width: '80%', margin: 'auto'}}>
+        <div class="shadow-2xl md:grid md:grid-cols-1 md:gap-6 min-w-[375px] w-full">
           <div class="md:col-span-1">
             <div class="px-4 sm:px-0"></div>
           </div>
           <div class="mt-5 md:mt-0 md:col-span-2">
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} class="min-w-[375px] mx-auto">
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-white sm:p-6">
                   <div class="grid grid-cols-6 gap-6">
                     <div class="col-span-6 sm:col-span-3">
                       <label
                         for="first_name"
-                        class="block text-sm font-medium "
+                        class="block text-lg font-medium "
                       >
                         Judul Donasi
                       </label>
@@ -148,7 +148,7 @@ function Donates() {
                     <div class="col-span-6 sm:col-span-3">
                       <label
                         for="last_name"
-                        class="block text-sm font-medium text-gray-700"
+                        class="block text-lg font-medium text-gray-700"
                       >
                         Nama Donatur
                       </label>
@@ -165,7 +165,7 @@ function Donates() {
                     <div className="col-span-6 sm:col-span-3">
                       <label
                         for="tanggal_selesai_donasi"
-                        class="block text-sm font-medium mb-1"
+                        class="block text-lg font-medium mb-1"
                       >
                         Tanggal Selesai Donasi
                       </label>
@@ -179,7 +179,7 @@ function Donates() {
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                      <label for="no_hp" class="block text-sm font-medium">
+                      <label for="no_hp" class="block text-lg font-medium">
                         No Hp
                       </label>
                       <input
@@ -195,7 +195,7 @@ function Donates() {
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                      <label for="email" class="block text-sm font-medium">
+                      <label for="email" class="block text-lg font-medium">
                         Email
                       </label>
                       <input
@@ -212,7 +212,7 @@ function Donates() {
                     <div className="col-span-6 sm:col-span-3">
                       <label
                         for="country"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-lg font-medium text-gray-700"
                       >
                         Kategori Donasi
                       </label>
@@ -230,7 +230,7 @@ function Donates() {
                       </select>
                     </div>
                     <div className="col-span-6 sm:col-span-6">
-                      <label className="block text-2xl font-medium text-sm ">
+                      <label className="block text-2xl font-medium text-lg ">
                         Upload Gambar
                       </label>
                       <input
@@ -244,7 +244,7 @@ function Donates() {
                     <div className="col-span-6 sm:col-span-6">
                       <label
                         for="alamat"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-lg font-medium text-gray-700"
                       >
                         Alamat
                       </label>
@@ -260,7 +260,7 @@ function Donates() {
                     <div className="col-span-6 sm:col-span-6">
                       <label
                         htmlFor="deskripsi"
-                        className="block text-sm font-medium text-gray-700"
+                        className="block text-lg font-medium text-gray-700"
                       >
                         Deskripsi
                       </label>
@@ -279,7 +279,7 @@ function Donates() {
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <button
                   type="submit"
-                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#00B0B9] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-2xl font-medium rounded-md text-white bg-[#00B0B9] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Submit
                 </button>
@@ -289,25 +289,25 @@ function Donates() {
         </div>
       </div>
       {/* Footer */}
-      <div className="bg-[#00B0B9]">
-        <div className=" mt-[10rem] h-[272px] flex">
-          <div className="w-[25%] h-[25%] py-[5rem] mx-[8rem]">
-            <img className="" src={logo2} />
+      <div className="bg-[#00B0B9] min-w-[375px]">
+        <div className="mt-[5rem] flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="w-full md:w-[25%] h-[25%] py-[5rem] mx-auto md:mx-[8rem]">
+            <img className="w-full" src={logo2} alt="Logo" />
           </div>
-          <div className="mt-[5rem] ml-[13rem] mr-[5rem]">
-            <p className="text-white mb-[2rem] font-bold">Menu</p>
+          <div className="mt-[2rem] mx-auto md:mx-[9rem] md:ml-[5rem]">
+            <p className="text-white mt-[2rem mb-[2rem] font-bold">Menu</p>
             <p className="text-white">Home</p>
             <p className="text-white">Events</p>
             <p className="text-white">Donates</p>
             <p className="text-white">About us</p>
           </div>
-          <div className="mt-[5rem] mx-[0rem]">
+          <div className="mt-[rem] sm:mr-8 md:mr-16 lg:mr-32 mx-auto md:mx-0">
             <p className="text-white mb-[2rem] font-bold">Sponsored By</p>
-            <img className="" src={sponsor} />
+            <img className="w-full" src={sponsor} alt="Sponsor" />
           </div>
         </div>
-        <div className="bg-white  h-1 mx-[5rem] "></div>
-        <div className="text-white ml-[7rem] pt-[2rem]">
+        <div className="bg-white h-1 mx-auto md:mx-[5rem] mt-[3rem] md:mt-0"></div>
+        <div className="text-white text-center mt-[3rem] md:flex md:justify-center lg:justify-start lg:ml-[7rem] lg:pt-[2rem]">
           <p>© 2023 Donate.com by Capstone Team</p>
         </div>
       </div>
