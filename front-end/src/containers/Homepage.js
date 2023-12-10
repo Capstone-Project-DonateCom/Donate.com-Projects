@@ -135,43 +135,42 @@ const Homepage = () => {
       </div>
 
       {/* Kategori Donasi */}
-      {/* <div>
-        <div className="bg-[#00B0B9] h-[700px]  rounded-[5rem]">
-          <p className="text-white pt-20 pl-40 text-[3rem] font-bold">
-            Kategori Donasi
-          </p>
-          <div className="w-[43rem]">
-            <p className="text-white pt-5 pl-40 text-[1rem] font-normal">
-              Sesuaikan kategori donasimu sesuai dengan kategori donasi yang
-              telah kami sediakan!
-            </p>
-          </div>
-          <div className="flex pt-20 ml-[10rem] mr-[10rem]">
-            <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem] ">
-              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={house} />
-              <p className="flex justify-center">untuk</p>
-              <p className="flex justify-center font-bold text-xl">Bencana</p>
-            </div>
-            <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
-              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={hospital} />
-              <p className="flex justify-center">untuk</p>
-              <p className="flex justify-center font-bold text-xl">Kesehatan</p>
-            </div>
-            <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
-              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={Graduation} />
-              <p className="flex justify-center">untuk</p>
-              <p className="flex justify-center font-bold text-xl">
-                Pendidikan
-              </p>
-            </div>
-            <div className="bg-white w-[15rem] h-[17rem] mx-[2rem]  rounded-[5rem]">
-              <img className="mx-[4.5rem] my-8 mb-[4rem]" src={Cash} />
-              <p className="flex justify-center">untuk</p>
-              <p className="flex justify-center font-bold text-xl">Lain-lain</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      <div>
+  <div className="bg-[#00B0B9] h-auto sm:h-[1000px] md:h-[700px] rounded-[5rem] text-center md:text-left">
+    <p className="text-white pt-8 md:pt-20 pl-8 md:pl-40 text-[2rem] md:text-[3rem] font-bold">
+      Kategori Donasi
+    </p>
+    <div className="w-full md:w-[43rem] mx-auto md:mx-0">
+      <p className="text-white pt-5 pl-8 md:pl-40 text-[0.8rem] md:text-[1rem] font-normal">
+        Sesuaikan kategori donasimu sesuai dengan kategori donasi yang telah
+        kami sediakan!
+      </p>
+    </div>
+    <div className="flex flex-wrap justify-center md:justify-start pt-8 md:pt-20 mx-auto md:ml-[12rem] md:mr-[10rem]">
+      <div className="bg-white w-[15rem] h-[17rem] lg:mx-5 mx-2 mb-4 md:mb-0 rounded-[5rem]">
+        <img className="mx-auto my-8 mb-4" src={house} alt="Bencana" />
+        <p className="text-center">untuk</p>
+        <p className="text-center font-bold text-xl">Bencana</p>
+      </div>
+      <div className="bg-white w-[15rem] h-[17rem] lg:mx-5 mx-2 mb-4 md:mb-0 rounded-[5rem]">
+        <img className="mx-auto my-8 mb-4" src={hospital} alt="Kesehatan" />
+        <p className="text-center">untuk</p>
+        <p className="text-center font-bold text-xl">Kesehatan</p>
+      </div>
+      <div className="bg-white w-[15rem] h-[17rem] lg:mx-5 mx-2 mb-4 md:mb-0 rounded-[5rem]">
+        <img className="mx-auto my-8 mb-4" src={Graduation} alt="Pendidikan" />
+        <p className="text-center">untuk</p>
+        <p className="text-center font-bold text-xl">Pendidikan</p>
+      </div>
+      <div className="bg-white w-[15rem] h-[17rem] lg:mx-5 mx-2 mb-4 md:mb-0 rounded-[5rem]">
+        <img className="mx-auto my-8 mb-4" src={Cash} alt="Lain-lain" />
+        <p className="text-center">untuk</p>
+        <p className="text-center font-bold text-xl">Lain-lain</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       {/* FAQ */}
 
@@ -357,24 +356,24 @@ const Homepage = () => {
 
       {/* Footer */}
       <div className="bg-[#00B0B9] min-w-[375px]">
-        <div className=" mt-[10rem] h-[272px] flex">
-          <div className="w-[25%] h-[25%] py-[5rem] mx-[8rem]">
-            <img className="" src={logo2} />
+        <div className="mt-[5rem] flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="w-full md:w-[25%] h-[25%] py-[5rem] mx-auto md:mx-[8rem]">
+            <img className="w-full" src={logo2} alt="Logo" />
           </div>
-          <div className="mt-[5rem] ml-[9rem] mr-[5rem]">
-            <p className="text-white mb-[2rem] font-bold">Menu</p>
+          <div className="mt-[2rem] mx-auto md:mx-[9rem] md:ml-[5rem]">
+            <p className="text-white mt-[2rem mb-[2rem] font-bold">Menu</p>
             <p className="text-white">Home</p>
             <p className="text-white">Events</p>
             <p className="text-white">Donates</p>
             <p className="text-white">About us</p>
           </div>
-          <div className="mt-[5rem] mx-[0rem]">
+          <div className="mt-[rem] sm:mr-8 md:mr-16 lg:mr-32 mx-auto md:mx-0">
             <p className="text-white mb-[2rem] font-bold">Sponsored By</p>
-            <img className="" src={sponsor} />
+            <img className="w-full" src={sponsor} alt="Sponsor" />
           </div>
         </div>
-        <div className="bg-white  h-1 mx-[5rem] "></div>
-        <div className="text-white ml-[7rem] pt-[2rem]">
+        <div className="bg-white h-1 mx-auto md:mx-[5rem] mt-[3rem] md:mt-0"></div>
+        <div className="text-white text-center mt-[3rem] md:flex md:justify-center lg:justify-start lg:ml-[7rem] lg:pt-[2rem]">
           <p>© 2023 Donate.com by Capstone Team</p>
         </div>
       </div>

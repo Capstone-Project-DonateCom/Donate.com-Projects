@@ -444,25 +444,25 @@ const About = () => {
       </div> */}
 
       {/* Footer */}
-      <div className="bg-[#00B0B9]">
-        <div className=" mt-[10rem] h-[272px] flex">
-          <div className="w-[25%] h-[25%] py-[5rem] mx-[8rem]">
-            <img className="" src={logo2} />
+      <div className="bg-[#00B0B9] min-w-[375px]">
+        <div className="mt-[5rem] flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="w-full md:w-[25%] h-[25%] py-[5rem] mx-auto md:mx-[8rem]">
+            <img className="w-full" src={logo2} alt="Logo" />
           </div>
-          <div className="mt-[5rem] ml-[9rem] mr-[5rem]">
-            <p className="text-white mb-[2rem] font-bold">Menu</p>
+          <div className="mt-[2rem] mx-auto md:mx-[9rem] md:ml-[5rem]">
+            <p className="text-white mt-[2rem mb-[2rem] font-bold">Menu</p>
             <p className="text-white">Home</p>
             <p className="text-white">Events</p>
             <p className="text-white">Donates</p>
             <p className="text-white">About us</p>
           </div>
-          <div className="mt-[5rem] mx-[0rem]">
+          <div className="mt-[rem] sm:mr-8 md:mr-16 lg:mr-32 mx-auto md:mx-0">
             <p className="text-white mb-[2rem] font-bold">Sponsored By</p>
-            <img className="" src={sponsor} />
+            <img className="w-full" src={sponsor} alt="Sponsor" />
           </div>
         </div>
-        <div className="bg-white  h-1 mx-[5rem] "></div>
-        <div className="text-white ml-[7rem] pt-[2rem]">
+        <div className="bg-white h-1 mx-auto md:mx-[5rem] mt-[3rem] md:mt-0"></div>
+        <div className="text-white text-center mt-[3rem] md:flex md:justify-center lg:justify-start lg:ml-[7rem] lg:pt-[2rem]">
           <p>© 2023 Donate.com by Capstone Team</p>
         </div>
       </div>
