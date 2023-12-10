@@ -5,17 +5,14 @@ import house from "../assets/house.png";
 import hospital from "../assets/Hospital.png";
 import Graduation from "../assets/Graduation.png";
 import Cash from "../assets/Cash.png";
-import Navbar from "../components/navbar/Navbar";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
-import bulet from "../assets/bulet.png";
-import bgfaq from "../assets/bgfaq.png";
 import "../index.css";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
     <div>
-      <Navbar />
       {/* Hero */}
       <div className="flex flex-col md:flex-row mx-auto min-w-[375px]">
         <div className="animation-container md:w-1/2 font-bold">
@@ -33,9 +30,11 @@ const Homepage = () => {
             </p>
           </div>
           <div className="animate-left md:pl-40 pt-7">
+          <Link to="/donates">
             <button className="bg-[#00B0B9] rounded-xl text-lg md:text-2xl px-5 py-2 text-white">
               Donasi Sekarang!
             </button>
+          </Link>
           </div>
         </div>
         <div className="animation-container md:flex">
@@ -121,9 +120,11 @@ const Homepage = () => {
                 donasi kami.
               </p>
               <div className="mt-4 ml-4 md:ml-0">
+              <Link to="/about">
                 <button className="bg-[#00B0B9] text-white px-3 py-2 md:px-4 md:py-3 rounded-[0.5rem] font-semibold text-lg md:text-xl">
                   <p> Detail &#62;</p>
                 </button>
+              </Link>
               </div>
             </div>
           </div>

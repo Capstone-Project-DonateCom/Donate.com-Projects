@@ -1,41 +1,24 @@
-import Navbar from "./components/navbar/Navbar";
-import Homepage from "./containers/Homepage";
-import Events from "./containers/Events";
-import About from "./containers/About";
-import Donates from "./containers/Donates";
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
-import Detail from "./containers/Detail";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/navbar/Navbar';
+import Homepage from './containers/Homepage';
+import Events from './containers/Events';
+import About from './containers/About';
+import Donates from './containers/Donates';
+import Detail from './containers/Detail';
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Homepage />,
-    },
-    {
-      path: "/about",
-      element: <About />,
-    },
-    {
-      path: "/events",
-      element: <Events />,
-    },
-    {
-      path: "/donates",
-      element: <Donates />,
-    },
-    {
-      path: "/events/:id",
-      element: <Detail />,
-    },
-  ]);
-  return <RouterProvider router={router} />;
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/events/:id" element={<Detail />} />
+        <Route path="/donates" element={<Donates />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

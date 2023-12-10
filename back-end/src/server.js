@@ -73,6 +73,19 @@ app.post('/donates', upload.single('gambar'), (req, res) => {
   });
 });
 
+app.get('/events/:id', (req, res) => {
+  const eventId = req.params.id;
+  const sql = 'SELECT * FROM donasi WHERE id_donasi = ?';
+  db.query(sql, eventId, (err, data) => {
+    if (err) return res.status(500).json({ error: 'Terjadi kesalahan saat mengambil data.' });
+    if (data.length === 0) return res.status(404).json({ message: 'Event tidak ditemukan.' });
+
+    return res.status(200).json(data[0]); // Mengembalikan data event yang sesuai
+  });
+});
+
+// Endpoint untuk mengambil foto berdasarkan ID donasi
+
 app.listen(port, () => {
   console.log(`Server sudah menyala pada port ${port}`);
 });

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import NavBar from "../components/navbar/Navbar";
 import gform from "../assets/gform.png";
 import t3 from "../assets/t3.png";
 import logo2 from "../assets/logo2.png";
@@ -72,7 +71,6 @@ function Donates() {
 
   return (
     <div>
-      <NavBar />
       {/* Hero */}
       <div className="flex flex-col md:flex-row items-center justify-center mt-32 space-y-8 md:space-y-0 md:space-x-8 min-w-[375px]">
     <div className="text-center">
@@ -120,7 +118,7 @@ function Donates() {
       <p className="text-5xl font-bold text-center">Form Untuk Donasi</p>
     </div>
       {/* Form */}
-      <div class="mt-10 sm:mt-0 flex justify-center">
+      <div class="sm:mt-0 flex justify-center" style={{width: '80%', margin: 'auto'}}>
         <div class="shadow-2xl md:grid md:grid-cols-1 md:gap-6 min-w-[375px] w-full">
           <div class="md:col-span-1">
             <div class="px-4 sm:px-0"></div>

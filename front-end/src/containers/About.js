@@ -1,11 +1,9 @@
 import React from "react";
-import NavBar from "../components/navbar/Navbar";
 import t3 from "../assets/t3.png";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
-import tese from "../assets/test.jpg";
-import FDimas from "../assets/Fdimas2.jpg";
-import FRian from "../assets/Frian2.jpg";
+import FDimas from "../assets/Fdimas.jpg";
+import FRian from "../assets/Frian.jpg";
 import FReza from "../assets/Freza.png";
 import FYunus from "../assets/Fyunus2.jpg";
 import FBintang from "../assets/Fbintang.jpg";
@@ -13,13 +11,12 @@ import FBintang from "../assets/Fbintang.jpg";
 const About = () => {
   return (
     <div>
-      <NavBar />
       <div>
         <div>
-          <p className="flex justify-center text-5xl font-bold pt-40">About</p>
+          <p className="flex justify-center text-5xl font-bold pt-40" style={{marginBottom: '20px'}}>About</p>
         </div>
-        <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-6">
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl font-normal leading-10 sm:leading-10 lg:leading-10 text-justify">
+        <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-6 flex justify-center"  style={{ width: '80%', margin: 'auto' }}>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-1xl 2xl:text-2xl font-normal leading-10 sm:leading-10 lg:leading-10 text-justify">
             <span className="text-[#00B0B9]">Donate.com </span>merupakan
             platform untuk menyatukan para pembuka donasi dengan individu yang
             ingin memberikan sumbangan. Dengan fokus pada keterbukaan dan
