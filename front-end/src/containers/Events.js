@@ -27,6 +27,7 @@ function Events() {
     description: event.deskripsi_donasi,
     labelDate: event.batas_donasi,
     location: event.alamat,
+    category: event.kategori_donasi,
     id: event.id_donasi,
   }));
 
@@ -58,6 +59,7 @@ function Events() {
               labelDate={event.labelDate}
               location={event.location}
               title={event.title}
+              category={event.category}
               id={event.id}
             />
           ))}

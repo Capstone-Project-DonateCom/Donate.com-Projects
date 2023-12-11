@@ -3,7 +3,7 @@ import logoLocation from ".././assets/Location.png";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const Card = ({ poster, title, description, labelDate, location, id }) => {
+const Card = ({ poster, title, description, labelDate, location, category, id }) => {
 
   const [events, setEvents] = useState([]);
 
@@ -20,8 +20,11 @@ const Card = ({ poster, title, description, labelDate, location, id }) => {
   
   return (  
     <div className="flex flex-col p-5 bg-white rounded-xl w-fit mx-auto">
-      <div>
-        <img className="" src={poster} alt="image" />
+      <div style={{ position: 'relative' }}>
+        <img className="" src={poster} alt={title} />
+        <p className="font-bold text-sm mt-3 ml-3 text-black bg-white leading-5 rounded-md p-2" style={{ position: 'absolute', top: 0, left: 0 }}>
+          Kategori : {category}
+        </p>
       </div>
       <div className="mt-4 h-full flex flex-col">
         <p className="font-bold text-2xl">{title}</p>
