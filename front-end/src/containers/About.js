@@ -12,10 +12,20 @@ const About = () => {
   return (
     <div>
       <div>
-        <div>
-          <p className="flex justify-center text-5xl font-bold pt-40" style={{marginBottom: '20px'}}>About</p>
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <p
+            className="flex justify-center text-5xl font-bold pt-40"
+            style={{ marginBottom: "20px" }}
+          >
+            About
+          </p>
         </div>
-        <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-6 flex justify-center"  style={{ width: '80%', margin: 'auto' }}>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="px-4 sm:px-8 md:px-16 lg:px-32 py-6 flex justify-center"
+          style={{ width: "80%", margin: "auto" }}
+        >
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-1xl 2xl:text-2xl font-normal leading-10 sm:leading-10 lg:leading-10 text-justify">
             <span className="text-[#00B0B9]">Donate.com </span>merupakan
             platform untuk menyatukan para pembuka donasi dengan individu yang
@@ -29,19 +39,33 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex justify-center pt-40">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          className="flex justify-center pt-40"
+        >
           <img src={t3} />
         </div>
       </div>
       {/* Team */}
       <div className=" text-[#333] p-4">
         <div className="max-w-7xl max-sm:max-w-sm mx-auto">
-          <h2 className=" flex justify-center text-4xl font-extrabold pt-36">
+          <h2
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            className=" flex justify-center text-4xl font-extrabold pt-36"
+          >
             Meet Our Team
           </h2>
-          <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-8 text-center mt-12 pt-20">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-8 text-center mt-12 pt-20"
+          >
             <div className="bg-white py-4 px-2 rounded-md hover:scale-110 transition-all duration-500">
               <img
+                data-aos="fade-up"
+                data-aos-duration="3000"
                 src={FDimas}
                 className="w-100 h-100 rounded-full inline-block"
               />
@@ -104,6 +128,8 @@ const About = () => {
             </div>
             <div className="bg-white py-4 px-2 rounded-md hover:scale-110 transition-all duration-500">
               <img
+                data-aos="fade-up"
+                data-aos-duration="3000"
                 src={FRian}
                 className="w-100 h-100 rounded-full inline-block"
               />
@@ -166,6 +192,8 @@ const About = () => {
             </div>
             <div className="bg-white py-4 px-2 rounded-md hover:scale-110 transition-all duration-500">
               <img
+                data-aos="fade-up"
+                data-aos-duration="3000"
                 src={FReza}
                 className="w-100 h-100 rounded-full inline-block border border-black"
               />
@@ -226,6 +254,8 @@ const About = () => {
             </div>
             <div className="bg-white py-4 px-2 rounded-md hover:scale-110 transition-all duration-500">
               <img
+                data-aos="fade-up"
+                data-aos-duration="3000"
                 src={FYunus}
                 className="w-100 h-100 rounded-full inline-block"
               />
@@ -286,6 +316,8 @@ const About = () => {
             </div>
             <div className="bg-white py-4 px-2 rounded-md hover:scale-110 transition-all duration-500">
               <img
+                data-aos="fade-up"
+                data-aos-duration="3000"
                 src={FBintang}
                 className="w-100 h-100 rounded-full inline-block"
               />

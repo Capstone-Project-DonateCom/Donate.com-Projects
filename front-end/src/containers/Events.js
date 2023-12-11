@@ -11,7 +11,8 @@ function Events() {
     axios
       .get("http://localhost:8000/")
       .then((res) => {
-        if (Array.isArray(res.data)) { // Memastikan res.data adalah array
+        if (Array.isArray(res.data)) {
+          // Memastikan res.data adalah array
           setEvents(res.data);
         } else {
           console.error("Data yang diterima bukanlah array:", res.data);
@@ -19,20 +20,24 @@ function Events() {
       })
       .catch((err) => console.log(err));
   }, []); // Menambahkan array kosong sebagai argumen kedua useEffect
-  
+
   const data = events.map((event) => ({
     poster: `http://localhost:8000/image/${event.poster}`,
     title: event.judul_donasi,
     description: event.deskripsi_donasi,
     labelDate: event.batas_donasi,
     location: event.alamat,
-    id: event.id_donasi
+    id: event.id_donasi,
   }));
 
   return (
     <div>
-      <div className="bg-[#00B0B9] px-8 py-12 mx-8 rounded-3xl">
-        <div className="flex">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        className="bg-[#00B0B9] px-8 py-12 mx-8 rounded-3xl"
+      >
+        <div data-aos="fade-up" data-aos-duration="3000" className="flex">
           <form className="flex bg-white min-w-[600px] mx-auto px-4 py-2 rounded-md justify-between items-center gap-x-2">
             <input
               className="bg-transparent outline-none w-full"
@@ -53,7 +58,7 @@ function Events() {
               labelDate={event.labelDate}
               location={event.location}
               title={event.title}
-              id={event.id} 
+              id={event.id}
             />
           ))}
         </div>

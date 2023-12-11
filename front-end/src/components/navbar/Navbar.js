@@ -33,7 +33,7 @@
 // export default Navbar;
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
 
 export default function NavBar() {
@@ -94,16 +94,44 @@ export default function NavBar() {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-20 md:space-y-0">
               <li className="  hover:text-[#00B0B9]">
-                <Link to="/">Home</Link>{" "}
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "border-b-[3px] border-[#00B0B9] pb-2 text-[#00B0B9]" : "text-black"
+                  }
+                  to="/"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="  hover:text-[#00B0B9]">
+                <NavLink
+                  className={({ isActive }) => 
+                    isActive ? "text-[#00B0B9]" : "text-black"
+                  }
+                  to="/events"
+                >
+                  Events
+                </NavLink>
               </li>
               <li className=" hover:text-[#00B0B9]">
-                <Link to="/events">Events</Link>{" "}
+                <NavLink
+                  className={({ isActive }) => 
+                    isActive ? "text-[#00B0B9]" : "text-black"
+                  }
+                  to="/donates"
+                >
+                  Donates
+                </NavLink>
               </li>
               <li className=" hover:text-[#00B0B9]">
-                <Link to="/donates">Donates</Link>{" "}
-              </li>
-              <li className=" hover:text-[#00B0B9]">
-                <Link to="/about">About</Link>{" "}
+                <NavLink
+                  className={({ isActive }) => 
+                    isActive ? "text-[#00B0B9]" : "text-black"
+                  }
+                  to="/about"
+                >
+                  About
+                </NavLink>
               </li>
             </ul>
           </div>

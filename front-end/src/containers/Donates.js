@@ -4,23 +4,22 @@ import t3 from "../assets/t3.png";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { nanoid } from "nanoid"; // Impor nanoid
 import dhero1 from "../assets/dhero1.png";
 import dhero2 from "../assets/dhero2.png";
 import dhero3 from "../assets/dhero3.png";
 
-
 function Donates() {
-  const [judul, setJudul] = useState('');
-  const [nama, setNama] = useState('');
-  const [date, setDate] = useState('');
-  const [number, setNumber] = useState('');
-  const [email, setEmail] = useState('');
-  const [kategori, setKategori] = useState('');
-  const [gambar, setGambar] = useState('');
-  const [alamat, setAlamat] = useState('');
-  const [deskripsi, setDeskripsi] = useState('');
+  const [judul, setJudul] = useState("");
+  const [nama, setNama] = useState("");
+  const [date, setDate] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [kategori, setKategori] = useState("");
+  const [gambar, setGambar] = useState("");
+  const [alamat, setAlamat] = useState("");
+  const [deskripsi, setDeskripsi] = useState("");
   const navigate = useNavigate();
 
   const onSubmit = async (e) => {
@@ -28,44 +27,43 @@ function Donates() {
 
     const uniqueID = nanoid();
 
-    console.log('id : ', uniqueID);
-    console.log('judul : ', judul);
-    console.log('nama : ', nama);
-    console.log('date : ', date);
-    console.log('number : ', number);
-    console.log('email : ', email);
-    console.log('kategori : ', kategori);
-    console.log('gambar : ', gambar);
-    console.log('alamat : ', alamat);
-    console.log('deskripsi : ', deskripsi);
+    console.log("id : ", uniqueID);
+    console.log("judul : ", judul);
+    console.log("nama : ", nama);
+    console.log("date : ", date);
+    console.log("number : ", number);
+    console.log("email : ", email);
+    console.log("kategori : ", kategori);
+    console.log("gambar : ", gambar);
+    console.log("alamat : ", alamat);
+    console.log("deskripsi : ", deskripsi);
 
     const data = new FormData();
-    data.append('id', uniqueID); // Sertakan ID unik ke dalam data yang dikirim
-    data.append('judul', judul);
-    data.append('nama', nama);
-    data.append('date', date);
-    data.append('number', number);
-    data.append('email', email);
-    data.append('kategori', kategori);
-    data.append('gambar', gambar);
-    data.append('alamat', alamat);
-    data.append('deskripsi', deskripsi);
+    data.append("id", uniqueID); // Sertakan ID unik ke dalam data yang dikirim
+    data.append("judul", judul);
+    data.append("nama", nama);
+    data.append("date", date);
+    data.append("number", number);
+    data.append("email", email);
+    data.append("kategori", kategori);
+    data.append("gambar", gambar);
+    data.append("alamat", alamat);
+    data.append("deskripsi", deskripsi);
 
     try {
       const response = await axios({
-        method: 'post',
-        url: 'http://localhost:8000/donates',
+        method: "post",
+        url: "http://localhost:8000/donates",
         data,
         headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+          "Content-Type": "multipart/form-data",
+        },
       });
-  
-      console.log('post success: ', response);
-      navigate('/Events');
 
+      console.log("post success: ", response);
+      navigate("/Events");
     } catch (error) {
-      console.error('error: ', error);
+      console.error("error: ", error);
     }
   };
 
@@ -73,52 +71,108 @@ function Donates() {
     <div>
       {/* Hero */}
       <div className="flex flex-col md:flex-row items-center justify-center mt-32 space-y-8 md:space-y-0 md:space-x-8 min-w-[375px]">
-    <div className="text-center">
-      <img src={dhero1} alt="Description 1" className="mx-auto" />
-      <div>
-        <p className="font-bold text-3xl pt-10">
-          Transparansi sepenuhnya
-        </p>
-        <p className="font-medium text-xl pt-5">
-          Transparan dengan bentuk dan kuantitas donasi yang diberikan.
-        </p>
+        <div className="text-center">
+          <img
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            src={dhero1}
+            alt="Description 1"
+            className="mx-auto"
+          />
+          <div>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="font-bold text-3xl pt-10"
+            >
+              Transparansi sepenuhnya
+            </p>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="font-medium text-xl pt-5"
+            >
+              Transparan dengan bentuk dan kuantitas donasi yang diberikan.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <img
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            src={dhero2}
+            alt="Description 2"
+            className="mx-auto"
+          />
+          <div>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="font-bold text-3xl pt-10"
+            >
+              Terbagi rata
+            </p>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="font-medium text-xl pt-5"
+            >
+              Donasi yang diberikan terbagi secara rata sesuai kebutuhan.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <img
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            src={dhero3}
+            alt="Description 3"
+            className="mx-auto"
+          />
+          <div>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="font-bold text-3xl pt-10"
+            >
+              Dapat dipercaya
+            </p>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              className="font-medium text-xl pt-5"
+            >
+              Dapat dipercaya karena donasi bersifat transparansi dari berbagai
+              aspek.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div className="text-center">
-      <img src={dhero2} alt="Description 2" className="mx-auto" />
-      <div>
-        <p className="font-bold text-3xl pt-10">
-        Terbagi rata
-        </p>
-        <p className="font-medium text-xl pt-5">
-        Donasi yang diberikan terbagi secara rata sesuai kebutuhan.
-        </p>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        className="flex flex-col items-center justify-center pt-20 min-w-[375px] "
+      >
+        <img src={t3} alt="pp" className="mx-auto" />
       </div>
-    </div>
 
-    <div className="text-center">
-      <img src={dhero3} alt="Description 3" className="mx-auto" />
-      <div>
-        <p className="font-bold text-3xl pt-10">
-        Dapat dipercaya
-          </p>
-        <p className="font-medium text-xl pt-5">
-        Dapat dipercaya karena donasi bersifat transparansi dari berbagai aspek.
-        </p>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        className="flex items-center justify-center pt-40 min-w-[375px]"
+      >
+        <p className="text-5xl font-bold text-center">Form Untuk Donasi</p>
       </div>
-    </div>
-  </div>
-
-    <div className="flex flex-col items-center justify-center pt-20 min-w-[375px] ">
-      <img src={t3} alt="pp" className="mx-auto" />
-    </div>
-
-    <div className="flex items-center justify-center pt-40 min-w-[375px]">
-      <p className="text-5xl font-bold text-center">Form Untuk Donasi</p>
-    </div>
       {/* Form */}
-      <div class="sm:mt-0 flex justify-center" style={{width: '80%', margin: 'auto'}}>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        class="sm:mt-0 flex justify-center"
+        style={{ width: "80%", margin: "auto" }}
+      >
         <div class="shadow-2xl md:grid md:grid-cols-1 md:gap-6 min-w-[375px] w-full">
           <div class="md:col-span-1">
             <div class="px-4 sm:px-0"></div>
@@ -136,7 +190,8 @@ function Donates() {
                         Judul Donasi
                       </label>
                       <input
-                        value={judul} onChange={(e) => setJudul(e.target.value)}
+                        value={judul}
+                        onChange={(e) => setJudul(e.target.value)}
                         type="text"
                         name="judul"
                         id="judul"
@@ -153,7 +208,8 @@ function Donates() {
                         Nama Donatur
                       </label>
                       <input
-                        value={nama} onChange={(e) => setNama(e.target.value)}
+                        value={nama}
+                        onChange={(e) => setNama(e.target.value)}
                         type="text"
                         name="nama"
                         id="nama"
@@ -170,7 +226,8 @@ function Donates() {
                         Tanggal Selesai Donasi
                       </label>
                       <input
-                        value={date} onChange={(e) => setDate(e.target.value)}
+                        value={date}
+                        onChange={(e) => setDate(e.target.value)}
                         type="date"
                         name="date"
                         id="date"
@@ -183,7 +240,8 @@ function Donates() {
                         No Hp
                       </label>
                       <input
-                        value={number} onChange={(e) => setNumber(e.target.value)}
+                        value={number}
+                        onChange={(e) => setNumber(e.target.value)}
                         type="tel"
                         name="number"
                         id="number"
@@ -199,7 +257,8 @@ function Donates() {
                         Email
                       </label>
                       <input
-                        value={email} onChange={(e) => setEmail(e.target.value)}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         name="email"
                         id="email"
@@ -212,12 +271,13 @@ function Donates() {
                     <div className="col-span-6 sm:col-span-3">
                       <label
                         for="country"
-                        className="block text-lg font-medium text-gray-700"
+                        className="block text-lg font-medium text-black"
                       >
                         Kategori Donasi
                       </label>
                       <select
-                        value={kategori} onChange={(e) => setKategori(e.target.value)}
+                        value={kategori}
+                        onChange={(e) => setKategori(e.target.value)}
                         id="kategori"
                         name="kategori"
                         autocomplete="kategori"
@@ -244,12 +304,13 @@ function Donates() {
                     <div className="col-span-6 sm:col-span-6">
                       <label
                         for="alamat"
-                        className="block text-lg font-medium text-gray-700"
+                        className="block text-lg font-medium text-black"
                       >
                         Alamat
                       </label>
                       <input
-                        value={alamat} onChange={(e) => setAlamat(e.target.value)}
+                        value={alamat}
+                        onChange={(e) => setAlamat(e.target.value)}
                         type="text"
                         name="alamat"
                         id="alamat"
@@ -265,7 +326,8 @@ function Donates() {
                         Deskripsi
                       </label>
                       <textarea
-                        value={deskripsi} onChange={(e) => setDeskripsi(e.target.value)}
+                        value={deskripsi}
+                        onChange={(e) => setDeskripsi(e.target.value)}
                         name="deskripsi"
                         id="deskripsi"
                         rows="8"
@@ -279,7 +341,7 @@ function Donates() {
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <button
                   type="submit"
-                  className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-2xl font-medium rounded-md text-white bg-[#00B0B9] hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="inline-flex justify-center py-2 px-6 border border-transparent shadow-2xl text-xl font-semibold rounded-xl mb-2 text-white bg-[#00B0B9] hover:bg-[#00B0B9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00B0B9]"
                 >
                   Submit
                 </button>
@@ -313,6 +375,6 @@ function Donates() {
       </div>
     </div>
   );
-};
+}
 
 export default Donates;
