@@ -405,7 +405,7 @@ const Homepage = () => {
           </div>
         </div>
         <div className="bg-white h-1 mx-auto md:mx-[5rem] mt-[3rem] md:mt-0"></div>
-        <div className="text-white text-center mt-[3rem] md:flex md:justify-center lg:justify-start lg:ml-[7rem] lg:pt-[2rem]">
+        <div className="text-white text-center mt-[3rem] md:flex md:justify-center lg:justify-center lg:pt-[1rem] lg:pb-[2rem]">
           <p>© 2023 Donate.com by Capstone Team</p>
         </div>
       </div>
