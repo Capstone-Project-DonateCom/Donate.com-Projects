@@ -1,37 +1,3 @@
-// /* eslint-disable jsx-a11y/anchor-is-valid */
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// const Navbar = () => {
-//   return (
-//     <div className="bg-[#ffffff] text-[#00B0B9] p-4 text-xl">
-//       <nav className="container mx-auto flex items-center justify-between">
-//         <div>
-//           <Link to="/" className=" text-3xl font-bold pl-40">
-//             Donate.com
-//           </Link>
-//         </div>
-//         <div className=" pr-20">
-//           <Link to="/" className=" m-10">
-//             Home
-//           </Link>
-//           <Link to="/" className=" m-10">
-//             Events
-//           </Link>
-//           <Link to="/" className=" m-10">
-//             Donates
-//           </Link>
-//           <Link to={`about`} className=" m-5">
-//             About
-//           </Link>
-//         </div>
-//       </nav>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
