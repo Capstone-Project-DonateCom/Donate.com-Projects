@@ -83,15 +83,15 @@ function Events() {
           <div className="w-full md:w-[25%] h-[25%] py-[5rem] mx-auto md:mx-[8rem]">
             <img className="w-full" src={logo2} alt="Logo" />
           </div>
-          <div className="mt-[2rem] mx-auto md:mx-[9rem] md:ml-[5rem]">
+          <div className="mt-[2rem] mx-auto md:mx-[9rem] md:ml-[2rem]">
             <p className="text-white mt-[2rem mb-[2rem] font-bold">Menu</p>
             <p className="text-white">Home</p>
             <p className="text-white">Events</p>
             <p className="text-white">Donates</p>
-            <p className="text-white">About us</p>
+            <p className="text-white t">About us</p>
           </div>
           <div className="mt-[rem] sm:mr-8 md:mr-16 lg:mr-32 mx-auto md:mx-0">
-            <p className="text-white mb-[2rem] font-bold">Sponsored By</p>
+            <p className="flex justify-center text-white mb-[2rem] font-bold">Sponsored By</p>
             <img className="w-full" src={sponsor} alt="Sponsor" />
           </div>
         </div>

@@ -9,9 +9,9 @@ import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
 import "../index.css";
 import { Link } from "react-router-dom";
-import bgfaq1 from "../assets/bgfaq1.png"
-import bgfaq2 from "../assets/bgfaq2.png"
-import bgfaq3 from "../assets/bgfaq3.png"
+import bgfaq1 from "../assets/bgfaq1.png";
+import bgfaq2 from "../assets/bgfaq2.png";
+import bgfaq3 from "../assets/bgfaq3.png";
 
 const Homepage = () => {
   return (
@@ -34,7 +34,7 @@ const Homepage = () => {
           </div>
           <div className="animate-left md:pl-40 pt-7">
             <Link to="/donates">
-              <button className="bg-[#00B0B9] rounded-xl text-lg md:text-2xl px-5 py-2 text-white">
+              <button className="bg-[#00B0B9] rounded-xl text-lg md:text-2xl px-5 py-2 text-white transform transition-transform duration-200 hover:scale-110">
                 Donasi Sekarang!
               </button>
             </Link>
@@ -127,12 +127,13 @@ const Homepage = () => {
                 donasi kami.
               </p>
               <div className="mt-4 ml-4 md:ml-0">
-                <Link to="/about">
-                  <button className="bg-[#00B0B9] text-white px-3 py-2 md:px-4 md:py-3 rounded-[0.5rem] font-semibold text-lg md:text-xl">
-                    <p> Detail &#62;</p>
-                  </button>
-                </Link>
-              </div>
+  <Link to="/about">
+    <button className="bg-[#00B0B9] text-white px-3 py-2 md:px-4 md:py-3 rounded-[0.5rem] font-semibold text-lg md:text-xl transform transition-transform duration-200 hover:scale-110 active:scale-105">
+      <p> Detail &#62;</p>
+    </button>
+  </Link>
+</div>
+
             </div>
           </div>
         </div>
@@ -143,8 +144,7 @@ const Homepage = () => {
       </div>
 
       {/* Kategori Donasi */}
-      <div data-aos="fade-up"
-        data-aos-duration="3000">
+      <div data-aos="fade-up" data-aos-duration="3000">
         <div className="bg-[#00B0B9] h-auto sm:h-[1000px] md:h-[700px] rounded-[5rem] text-center md:text-left">
           <p className="text-white pt-8 md:pt-20 pl-8 md:pl-40 text-[2rem] md:text-[3rem] font-bold">
             Kategori Donasi
@@ -189,20 +189,28 @@ const Homepage = () => {
       </div>
 
       {/* FAQ */}
-      <div data-aos="fade-right"
-        data-aos-duration="3000"className="relative"> 
+      <div data-aos="fade-right" data-aos-duration="3000" className="relative">
         <div className="absolute w-full h-full">
-            <img className="top-[-50px] z-[-4] absolute" src={bgfaq1}/>
-            <img className="left-0 bottom-[-150px] z-[-4] absolute" src={bgfaq2}/>
-            <img className="absolute right-0 bottom-[-50px] z-[-4]" src={bgfaq3}/>
-        </div> 
+          <img className="top-[-50px] z-[-4] absolute" src={bgfaq1} />
+          <img
+            className="left-0 bottom-[-150px] z-[-4] absolute"
+            src={bgfaq2}
+          />
+          <img
+            className="absolute right-0 bottom-[-50px] z-[-4]"
+            src={bgfaq3}
+          />
+        </div>
         <div>
           <p className="flex justify-center mt-[10rem] mx-auto font-bold text-5xl">
             FAQ
           </p>
         </div>
-        <ul data-aos="fade-up"
-        data-aos-duration="3000" className="max-w-6xl mx-auto mt-20 divide-y bg-white shadow shadow-[#00B0B9] rounded-xl min-w-[375px]">
+        <ul
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="max-w-6xl mx-auto mt-20 divide-y bg-white shadow shadow-[#00B0B9] rounded-xl min-w-[375px]"
+        >
           <li>
             <details className="group">
               <summary className="flex items-center gap-3 px-4 py-3 font-bold marker:content-none hover:cursor-pointer">
@@ -392,20 +400,22 @@ const Homepage = () => {
           <div className="w-full md:w-[25%] h-[25%] py-[5rem] mx-auto md:mx-[8rem]">
             <img className="w-full" src={logo2} alt="Logo" />
           </div>
-          <div className="mt-[2rem] mx-auto md:mx-[9rem] md:ml-[5rem]">
+          <div className="mt-[2rem] mx-auto md:mx-[9rem] md:ml-[2rem]">
             <p className="text-white mt-[2rem mb-[2rem] font-bold">Menu</p>
             <p className="text-white">Home</p>
             <p className="text-white">Events</p>
             <p className="text-white">Donates</p>
-            <p className="text-white">About us</p>
+            <p className="text-white t">About us</p>
           </div>
           <div className="mt-[rem] sm:mr-8 md:mr-16 lg:mr-32 mx-auto md:mx-0">
-            <p className="text-white mb-[2rem] font-bold">Sponsored By</p>
+            <p className="flex justify-center text-white mb-[2rem] font-bold">
+              Sponsored By
+            </p>
             <img className="w-full" src={sponsor} alt="Sponsor" />
           </div>
         </div>
         <div className="bg-white h-1 mx-auto md:mx-[5rem] mt-[3rem] md:mt-0"></div>
-        <div className="text-white text-center mt-[3rem] md:flex md:justify-center lg:justify-center lg:pt-[1rem] lg:pb-[2rem]">
+        <div className="text-white text-center mt-[3rem] md:flex md:justify-center lg:justify-start lg:ml-[7rem] lg:pt-[2rem]">
           <p>© 2023 Donate.com by Capstone Team</p>
         </div>
       </div>

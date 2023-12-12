@@ -356,20 +356,20 @@ function Donates() {
           <div className="w-full md:w-[25%] h-[25%] py-[5rem] mx-auto md:mx-[8rem]">
             <img className="w-full" src={logo2} alt="Logo" />
           </div>
-          <div className="mt-[2rem] mx-auto md:mx-[9rem] md:ml-[5rem]">
+          <div className="mt-[2rem] mx-auto md:mx-[9rem] md:ml-[2rem]">
             <p className="text-white mt-[2rem mb-[2rem] font-bold">Menu</p>
             <p className="text-white">Home</p>
             <p className="text-white">Events</p>
             <p className="text-white">Donates</p>
-            <p className="text-white">About us</p>
+            <p className="text-white t">About us</p>
           </div>
           <div className="mt-[rem] sm:mr-8 md:mr-16 lg:mr-32 mx-auto md:mx-0">
-            <p className="text-white mb-[2rem] font-bold">Sponsored By</p>
+            <p className="flex justify-center text-white mb-[2rem] font-bold">Sponsored By</p>
             <img className="w-full" src={sponsor} alt="Sponsor" />
           </div>
         </div>
         <div className="bg-white h-1 mx-auto md:mx-[5rem] mt-[3rem] md:mt-0"></div>
-        <div className="text-white text-center mt-[3rem] md:flex md:justify-center lg:justify-center lg:pt-[1rem] lg:pb-[2rem]">
+        <div className="text-white text-center mt-[3rem] md:flex md:justify-center lg:justify-start lg:ml-[7rem] lg:pt-[2rem]">
           <p>© 2023 Donate.com by Capstone Team</p>
         </div>
       </div>
