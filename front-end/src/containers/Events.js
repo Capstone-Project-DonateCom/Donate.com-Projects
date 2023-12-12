@@ -7,6 +7,8 @@ import axios from "axios";
 
 function Events() {
   const [events, setEvents] = useState([]);
+  const [searchTerm, setSearchTerm] = useState(""); // State untuk nilai pencarian
+
   useEffect(() => {
     axios
       .get("http://localhost:8000/")
@@ -21,7 +23,11 @@ function Events() {
       .catch((err) => console.log(err));
   }, []); // Menambahkan array kosong sebagai argumen kedua useEffect
 
-  const data = events.map((event) => ({
+  const filteredEvents = events.filter((event) =>
+    event.judul_donasi.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const data = filteredEvents.map((event) => ({
     poster: `http://localhost:8000/image/${event.poster}`,
     title: event.judul_donasi,
     description: event.deskripsi_donasi,
@@ -31,6 +37,10 @@ function Events() {
     id: event.id_donasi,
   }));
 
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <div>
       <div
@@ -39,11 +49,13 @@ function Events() {
         className="bg-[#00B0B9] px-8 py-12 mx-8 rounded-3xl"
       >
         <div data-aos="fade-up" data-aos-duration="3000" className="flex">
-          <form className="flex bg-white min-w-[600px] mx-auto px-4 py-2 rounded-md justify-between items-center gap-x-2">
+          <form onSubmit={(e) => e.preventDefault()} className="flex bg-white min-w-[600px] mx-auto px-4 py-2 rounded-md justify-between items-center gap-x-2">
             <input
               className="bg-transparent outline-none w-full"
               placeholder="Masukkan Event..."
               type="text"
+              value={searchTerm}
+              onChange={handleSearch}
             />
             <div>
               <img className="w-[28px]" src={searchIcon} alt="search icon" />
