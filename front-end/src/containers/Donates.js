@@ -231,7 +231,7 @@ function Donates() {
                         type="date"
                         name="date"
                         id="date"
-                        class="mt-1 focus:ring-[#00B0B9] focus:border-[#00B0B9] block w-full shadow-sm sm:text-sm border-black border-2 py-3"
+                        class="mt-1 focus:ring-[#00B0B9] focus:border-[#00B0B9] block w-full shadow-sm sm:text-sm border-black border-2 py-3 pr-3"
                       />
                     </div>
 
@@ -283,6 +283,7 @@ function Donates() {
                         autocomplete="kategori"
                         className="mt-1 block w-full  border bg-white shadow-sm focus:outline-none focus:ring-black focus:border-black sm:text-sm  border-black border-2 py-3"
                       >
+                        <option>Pilih Kategori</option>
                         <option>Bencana</option>
                         <option>Kesehatan</option>
                         <option>Pendidikan</option>
@@ -369,7 +370,7 @@ function Donates() {
           </div>
         </div>
         <div className="bg-white h-1 mx-auto md:mx-[5rem] mt-[3rem] md:mt-0"></div>
-        <div className="text-white text-center mt-[3rem] md:flex md:justify-center lg:justify-start lg:ml-[7rem] lg:pt-[2rem]">
+        <div className="text-white text-center mt-[3rem] pb-10 md:flex md:justify-center lg:justify-center">
           <p>© 2023 Donate.com by Capstone Team</p>
         </div>
       </div>

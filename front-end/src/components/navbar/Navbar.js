@@ -72,7 +72,7 @@ export default function NavBar() {
               <li className="  hover:text-[#00B0B9]">
                 <NavLink
                   className={({ isActive }) => 
-                    isActive ? "text-[#00B0B9]" : "text-black"
+                    isActive ? "border-b-[3px] border-[#00B0B9] pb-2 text-[#00B0B9]" : "text-black"
                   }
                   to="/events"
                 >
@@ -82,7 +82,7 @@ export default function NavBar() {
               <li className=" hover:text-[#00B0B9]">
                 <NavLink
                   className={({ isActive }) => 
-                    isActive ? "text-[#00B0B9]" : "text-black"
+                    isActive ? "border-b-[3px] border-[#00B0B9] pb-2 text-[#00B0B9]" : "text-black"
                   }
                   to="/donates"
                 >
@@ -92,7 +92,7 @@ export default function NavBar() {
               <li className=" hover:text-[#00B0B9]">
                 <NavLink
                   className={({ isActive }) => 
-                    isActive ? "text-[#00B0B9]" : "text-black"
+                    isActive ? "border-b-[3px] border-[#00B0B9] pb-2 text-[#00B0B9]" : "text-black"
                   }
                   to="/about"
                 >
