@@ -7,10 +7,11 @@ import FRian from "../assets/Frian2.jpg";
 import FReza from "../assets/Freza.png";
 import FYunus from "../assets/Fyunus2.jpg";
 import FBintang from "../assets/Fbintang.jpg";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div>
+    <div className=" min-w-[375px]">
       <div>
         <div data-aos="fade-up" data-aos-duration="1500">
           <p
@@ -75,54 +76,58 @@ const About = () => {
                 </h4>
                 <p className="text-xs mt-1">Frond-End Developer</p>
                 <div className="space-x-4 mt-4">
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-gray-100 hover:bg-gray-200"
+                  <Link
+                    to="https://www.instagram.com/dimaasprstya/"
+                    target="_blank"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12px"
-                      fill="#333"
-                      viewBox="0 0 155.139 155.139"
+                    <button
+                      type="button"
+                      className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
                     >
-                      <path
-                        d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"
-                        data-original="#010002"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#C21292"
+                        width="12px"
+                        viewBox="0 0 25 25"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        />
+                        <circle cx="12" cy="12" r="3" />
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.5" />
+                      </svg>
+                    </button>
+                  </Link>
+                  <Link
+                    to="https://www.linkedin.com/in/muhammad-dimas-prasetya-55884524b/"
+                    target="_blank"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12px"
-                      fill="#333"
-                      viewBox="0 0 512 512"
+                    <button
+                      type="button"
+                      className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
                     >
-                      <path
-                        d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"
-                        data-original="#03a9f4"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14px"
-                      fill="#333"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z"
-                        data-original="#0077b5"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14px"
+                        fill="#333"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z"
+                          data-original="#0077b5"
+                        />
+                      </svg>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -139,54 +144,55 @@ const About = () => {
                 </h4>
                 <p className="text-xs mt-1">Frond-End Developer</p>
                 <div className="space-x-4 mt-4">
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-gray-100 hover:bg-gray-200"
+                  <Link
+                    to="https://www.instagram.com/andiryannto/"
+                    target="_blank"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12px"
-                      fill="#333"
-                      viewBox="0 0 155.139 155.139"
+                    <button
+                      type="button"
+                      className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
                     >
-                      <path
-                        d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"
-                        data-original="#010002"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12px"
-                      fill="#333"
-                      viewBox="0 0 512 512"
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#C21292"
+                        width="12px"
+                        viewBox="0 0 25 25"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        />
+                        <circle cx="12" cy="12" r="3" />
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.5" />
+                      </svg>
+                    </button>
+                  </Link>
+                  <Link to="https://www.linkedin.com/in/muhammad-andi-rianto-a7587929a/" target="_blank">
+                    <button
+                      type="button"
+                      className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
                     >
-                      <path
-                        d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"
-                        data-original="#03a9f4"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14px"
-                      fill="#333"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z"
-                        data-original="#0077b5"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14px"
+                        fill="#333"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z"
+                          data-original="#0077b5"
+                        />
+                      </svg>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -201,38 +207,38 @@ const About = () => {
                 <h4 className="text-base font-extrabold">Reza Hakim</h4>
                 <p className="text-xs mt-1">Back-End Developer</p>
                 <div className="space-x-4 mt-4">
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-gray-100 hover:bg-gray-200"
+                  <Link
+                    to="https://www.instagram.com/rezaaahakim_"
+                    target="_blank"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12px"
-                      fill="#333"
-                      viewBox="0 0 155.139 155.139"
+                    <button
+                      type="button"
+                      className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
                     >
-                      <path
-                        d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"
-                        data-original="#010002"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12px"
-                      fill="#333"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"
-                        data-original="#03a9f4"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#C21292"
+                        width="12px"
+                        viewBox="0 0 25 25"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        />
+                        <circle cx="12" cy="12" r="3" />
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.5" />
+                      </svg>
+                    </button>
+                  </Link>
+                  <Link to="https://www.linkedin.com/in/reza-hakim-757784283/" target="_blank">
                   <button
                     type="button"
                     className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
@@ -249,6 +255,7 @@ const About = () => {
                       />
                     </svg>
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -263,38 +270,38 @@ const About = () => {
                 <h4 className="text-base font-extrabold">Ahmad Yunus</h4>
                 <p className="text-xs mt-1">DevOps</p>
                 <div className="space-x-4 mt-4">
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-gray-100 hover:bg-gray-200"
+                  <Link
+                    to="https://www.instagram.com/ahmadynss_/"
+                    target="_blank"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12px"
-                      fill="#333"
-                      viewBox="0 0 155.139 155.139"
+                    <button
+                      type="button"
+                      className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
                     >
-                      <path
-                        d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"
-                        data-original="#010002"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12px"
-                      fill="#333"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"
-                        data-original="#03a9f4"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#C21292"
+                        width="12px"
+                        viewBox="0 0 25 25"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        />
+                        <circle cx="12" cy="12" r="3" />
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.5" />
+                      </svg>
+                    </button>
+                  </Link>
+                  <Link to="https://linkedin.com/in/ahmdyunus53" target="_blank">
                   <button
                     type="button"
                     className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
@@ -311,6 +318,7 @@ const About = () => {
                       />
                     </svg>
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -325,38 +333,38 @@ const About = () => {
                 <h4 className="text-base font-extrabold">Aria Bintang</h4>
                 <p className="text-xs mt-1">Back-End Developer</p>
                 <div className="space-x-4 mt-4">
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-gray-100 hover:bg-gray-200"
+                  <Link
+                    to="https://www.instagram.com/ariabintangr/"
+                    target="_blank"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12px"
-                      fill="#333"
-                      viewBox="0 0 155.139 155.139"
+                    <button
+                      type="button"
+                      className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
                     >
-                      <path
-                        d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z"
-                        data-original="#010002"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    type="button"
-                    className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12px"
-                      fill="#333"
-                      viewBox="0 0 512 512"
-                    >
-                      <path
-                        d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"
-                        data-original="#03a9f4"
-                      />
-                    </svg>
-                  </button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#C21292"
+                        width="12px"
+                        viewBox="0 0 25 25"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        />
+                        <circle cx="12" cy="12" r="3" />
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.5" />
+                      </svg>
+                    </button>
+                  </Link>
+                 <Link to="https://www.linkedin.com/in/aria-bintang-772146260/" target="_blank">
                   <button
                     type="button"
                     className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none  bg-gray-100 hover:bg-gray-200"
@@ -373,6 +381,7 @@ const About = () => {
                       />
                     </svg>
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -380,113 +389,23 @@ const About = () => {
         </div>
       </div>
 
-      {/* <div>
-        <p className="flex justify-center text-5xl font-bold pt-40">Our Team</p>
-      </div>
-      <div style={{ display: "flex" }}>
-        <div className="h-[400px] w-[400px] bg-[#00B0B9] border-[#00B0B9] border-2 mx-auto mt-20">
-          <div>
-            <img className="h=[400px] w-[400px]" src={tese} />
-            <div className="">
-              <p className="text-md font-bold text-center mt-2 text-white">
-                Aria Bintang
-              </p>
-              <p className="text-sm font-semibold text-center mt-2 text-white">
-                Front-End & Back-End
-              </p>
-              <p className="text-xs font-medium text-center mt-2 text-white">
-                Universitas
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="h-[300px] w-[275px] border-[#00B0B9] border-2 mx-auto mt-20">
-          <div>
-            <img className="h=[250px] w-[275px]" src={tese} />
-            <div className="py-2 bg-[#00B0B9]">
-              <p className="text-md font-bold text-center mt-2  text-white">
-                Muhammad Dimas Prasetya
-              </p>
-              <p className="text-sm font-semibold text-center mt-2  text-white">
-                Front-End & Back-End
-              </p>
-              <p className="text-xs font-medium text-center mt-2  text-white">
-                Universitas Muhammadiyah Tangerang
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="h-[300px] w-[275px] border-[#00B0B9] border-2 mx-auto mt-20">
-          <div>
-            <img className="h=[250px] w-[275px] mx-auto" src={tese} />
-            <div className="py-2 bg-[#00B0B9]">
-              <p className="text-md font-bold text-center mt-2  text-white">
-                Muhammad Andi Rianto
-              </p>
-              <p className="text-sm font-semibold text-center mt-2  text-white">
-                Front-End & Back-End
-              </p>
-              <p className="text-xs font-medium text-center mt-2  text-white">
-                Universitas Muhammadiyah Tangerang
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style={{ display: "flex" }}>
-        <div className="h-[300px] w-[275px] border-[#00B0B9] border-2 mx-auto mt-20">
-          <div>
-            <img className="h=[250px] w-[275px] flek mx-auto" src={tese} />
-            <div className="py-2 bg-[#00B0B9]">
-              <p className="text-md font-bold text-center mt-2  text-white">
-                Reza Hakim
-              </p>
-              <p className="text-sm font-semibold text-center mt-2  text-white">
-                Front-End & Back-End
-              </p>
-              <p className="text-xs font-medium text-center mt-2  text-white">
-                Universitas
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="h-[300px] w-[275px] border-[#00B0B9] border-2 mx-auto mt-20">
-          <div>
-            <img className="h=[250px] w-[275px]" src={tese} />
-            <div className="py-2 bg-[#00B0B9]">
-              <p className="text-md font-bold text-center mt-2  text-white">
-                Ahmad Yunus
-              </p>
-              <p className="text-sm font-semibold text-center mt-2  text-white">
-                FullStack
-              </p>
-              <p className="text-xs font-medium text-center mt-2  text-white">
-                Universitas
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       {/* Footer */}
       <div className="bg-[#00B0B9] min-w-[375px]">
         <div className="mt-[5rem] flex flex-col md:flex-row md:items-center md:justify-between">
           <div className="w-full md:w-[25%] h-[25%] py-[5rem] mx-auto md:mx-[8rem]">
             <img className="w-full" src={logo2} alt="Logo" />
           </div>
-          <div className="mt-[2rem] mx-auto md:mx-[9rem] md:ml-[5rem]">
+          <div className="mt-[2rem] mx-auto md:mx-[9rem] md:ml-[2rem]">
             <p className="text-white mt-[2rem mb-[2rem] font-bold">Menu</p>
             <p className="text-white">Home</p>
             <p className="text-white">Events</p>
             <p className="text-white">Donates</p>
-            <p className="text-white">About us</p>
+            <p className="text-white t">About us</p>
           </div>
           <div className="mt-[rem] sm:mr-8 md:mr-16 lg:mr-32 mx-auto md:mx-0">
-            <p className="text-white mb-[2rem] font-bold">Sponsored By</p>
+            <p className="flex justify-center text-white mb-[2rem] font-bold">
+              Sponsored By
+            </p>
             <img className="w-full" src={sponsor} alt="Sponsor" />
           </div>
         </div>
