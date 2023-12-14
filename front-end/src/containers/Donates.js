@@ -105,7 +105,7 @@ function Donates() {
             alt="Description 2"
             className="mx-auto"
           />
-          <div>
+          <div className=" mx-auto">
             <p
               data-aos="fade-up"
               data-aos-duration="3000"
@@ -131,7 +131,7 @@ function Donates() {
             alt="Description 3"
             className="mx-auto"
           />
-          <div>
+          <div className="mx-auto lg:mr-3">
             <p
               data-aos="fade-up"
               data-aos-duration="3000"

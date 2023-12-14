@@ -47,48 +47,6 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* Selamat Datang */}
-      {/* <div className="flex mt-40 scroll-animation">
-        <div className="w-1/2 py-20">
-          <div>
-            <div className="bg-[#00B0B9] rounded-md py-10 mr">
-              <p className="text-white ml-40 text-[3rem] font-bold">
-                Selamat Datang di
-              </p>
-            </div>
-            <p className="text-[#00B0B9] ml-40 text-[3rem] font-semibold">
-              Donate.com
-            </p>
-          </div>
-          <div>
-            <hr className="h-1 bg-black ml-40 mt-4"></hr>
-          </div>
-          <div>
-            <p className="ml-40 font-bold leading-[55px]">
-              Menyatukan Hati Baik, Membuat Perbedaan Bersama!
-            </p>
-          </div>
-          <div>
-            <p className="ml-40 text-justify">
-              Temukan kebaikan di Donate.com, tempat di mana komunitas pembuat
-              donasi dan pendonasi saling mendukung. Proyek donasi beragam
-              menanti Anda, dari kesehatan hingga pendidikan. Transparansi,
-              keamanan, dan keterlibatan personal adalah inti dari pengalaman
-              donasi kami.
-            </p>
-            <div className="mt-4">
-              <button className="bg-[#00B0B9] text-white ml-40 px-3 py-3 rounded-[0.5rem] font-semibold text-xl">
-                <p className="text-xl"> Detail &#62;</p>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-[50%] pl-20">
-          <img src={hero2} alt="Hero Image" />
-        </div>
-      </div> */}
-
       <div
         data-aos="fade-up"
         data-aos-duration="3000"
@@ -279,10 +237,6 @@ const Homepage = () => {
                   - Kemudian, terdapat formulir yang harus diisi dengan
                   memasukkan data yang diperlukan seperti judul donasi, kontak
                   dan lainnya.
-                </p>
-                <p>
-                  - Selanjutnya, penyalur donasi dapat mencentang checkbox "Saya
-                  setuju dengan syarat dan ketentuan".
                 </p>
                 <p>- Lalu, klik "Submit" untuk mengirim formulir.</p>
                 <p>

@@ -66,20 +66,21 @@ function Events() {
               </div>
             </form>
           </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 mt-16 gap-20">
-          {data.map((event, index) => (
-            <Card
-              key={index}
-              poster={event.poster}
-              description={event.description}
-              labelDate={event.labelDate}
-              location={event.location}
-              title={event.title}
-              category={event.category}
-              id={event.id}
-            />
-          ))}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 mt-16 gap-20">
+            {data.map((event, index) => (
+              <Card
+                key={index}
+                poster={event.poster}
+                description={event.description}
+                labelDate={event.labelDate}
+                location={event.location}
+                title={event.title}
+                category={event.category}
+                id={event.id}
+              />
+            ))}
+          </div>
         </div>
       </div>
       {/* Footer */}
