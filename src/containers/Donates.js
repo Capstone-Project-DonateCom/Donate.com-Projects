@@ -57,8 +57,8 @@ function Donates() {
         data,
         headers: {
           "Content-Type": "multipart/form-data",
-          'Access-Control-Allow-Origin': '*',
         },
+        crossdomain: true,
       });
 
       console.log("post success: ", response);
