@@ -68,9 +68,9 @@ function Donates() {
   };
 
   return (
-    <div>
+    <div className="min-w-[375px]">
       {/* Hero */}
-      <div className="flex flex-col md:flex-row items-center justify-center mt-32 ml-11 mr-6 space-y-8 md:space-y-0 md:space-x-8 min-w-[375px]">
+      <div className="flex flex-col md:flex-row items-center justify-center mt-32 ml- mr- space-y-8 md:space-y-0 md:space-x-8 min-w-[375px]">
         <div className="text-center">
           <img
             data-aos="fade-up"

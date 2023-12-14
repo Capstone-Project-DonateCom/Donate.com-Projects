@@ -15,7 +15,7 @@ import bgfaq3 from "../assets/bgfaq3.png";
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="min-w-[375px]">
       {/* Hero */}
       <div className="flex flex-col md:flex-row mx-auto min-w-[375px]">
         <div className="animation-container md:w-1/2 font-bold">
@@ -97,43 +97,45 @@ const Homepage = () => {
         <div className="w-full md:w-1/2 py-4 md:py-20 min-w-[375px]">
           <div>
             <div className="bg-[#00B0B9] rounded-md py-4 md:py-10 mx-4 md:mx-0">
-              <p className="ml-40 text-white text-2xl md:text-5xl font-bold">
+              <p className="flex justify-center text-white text-2xl md:text-5xl font-bold">
                 Selamat Datang di
               </p>
             </div>
-            <div className="ml-40">
-              <p className="text-[#00B0B9] text-2xl md:text-5xl font-semibold mt-5 ml-4 md:ml-0">
-                Donate.com
-              </p>
-            </div>
-          </div>
-          <div className="ml-40">
-            <div>
-              <hr className="h-1 bg-black mt-4 mx-4 md:mx-0"></hr>
-            </div>
-            <div>
-              <p className="ml-4 md:ml-0 font-bold text-lg md:text-xl mt-5 leading-[35px]">
-                Menyatukan Hati Baik, Membuat Perbedaan Bersama!
-              </p>
-            </div>
-          </div>
-          <div>
-            <div className="ml-40 mt-5">
-              <p className="ml-4 md:ml-0 text-justify text-base md:text-xl">
-                Temukan kebaikan di Donate.com, tempat di mana komunitas pembuat
-                donasi dan pendonasi saling mendukung. Proyek donasi beragam
-                menanti Anda, dari kesehatan hingga pendidikan. Transparansi,
-                keamanan, dan keterlibatan personal adalah inti dari pengalaman
-                donasi kami.
-              </p>
-              <div className="mt-4 ml-4 md:ml-0">
-  <Link to="/about">
-    <button className="bg-[#00B0B9] text-white px-3 py-2 md:px-4 md:py-3 rounded-[0.5rem] font-semibold text-lg md:text-xl transform transition-transform duration-200 hover:scale-110 active:scale-105">
-      <p> Detail &#62;</p>
-    </button>
-  </Link>
-</div>
+            <div className="lg:ml-40 md:ml-0 sm:ml-0">
+              <div className="">
+                <p className="text-[#00B0B9] text-2xl md:text-5xl font-semibold mt-5 ml-4 md:ml-0 smk">
+                  Donate.com
+                </p>
+              </div>
 
+              <div className="">
+                <div>
+                  <hr className="h-1 bg-black mt-4 mx-4 md:mx-0"></hr>
+                </div>
+                <div>
+                  <p className="ml-4 md:ml-0 font-bold text-lg md:text-xl mt-5 leading-[35px]">
+                    Menyatukan Hati Baik, Membuat Perbedaan Bersama!
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div className="mt-5">
+                  <p className="ml-4 md:ml-0 text-justify text-base md:text-xl">
+                    Temukan kebaikan di Donate.com, tempat di mana komunitas
+                    pembuat donasi dan pendonasi saling mendukung. Proyek donasi
+                    beragam menanti Anda, dari kesehatan hingga pendidikan.
+                    Transparansi, keamanan, dan keterlibatan personal adalah
+                    inti dari pengalaman donasi kami.
+                  </p>
+                  <div className="mt-4 ml-4 md:ml-0">
+                    <Link to="/about">
+                      <button className="bg-[#00B0B9] text-white px-3 py-2 md:px-4 md:py-3 rounded-[0.5rem] font-semibold text-lg md:text-xl transform transition-transform duration-200 hover:scale-110 active:scale-105">
+                        <p> Detail &#62;</p>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -145,7 +147,7 @@ const Homepage = () => {
 
       {/* Kategori Donasi */}
       <div data-aos="fade-up" data-aos-duration="3000">
-        <div className="bg-[#00B0B9] h-auto sm:h-[1000px] md:h-[700px] rounded-[5rem] text-center md:text-left">
+        <div className="bg-[#00B0B9] h-auto sm:h-[1000px] md:h-[700px] rounded-[5rem] text-center md:text-left min-w-[375px]">
           <p className="text-white pt-8 md:pt-20 pl-8 md:pl-40 text-[2rem] md:text-[3rem] font-bold">
             Kategori Donasi
           </p>

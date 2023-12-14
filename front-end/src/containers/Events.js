@@ -43,24 +43,29 @@ function Events() {
 
   return (
     <div>
-      <div
-        data-aos="fade-up"
-        data-aos-duration="3000"
-        className="bg-[#00B0B9] px-8 py-12 mx-8 rounded-3xl"
-      >
-        <div data-aos="fade-up" data-aos-duration="3000" className="flex">
-          <form onSubmit={(e) => e.preventDefault()} className="flex bg-white min-w-[600px] mx-auto px-4 py-2 rounded-md justify-between items-center gap-x-2">
-            <input
-              className="bg-transparent outline-none w-full"
-              placeholder="Masukkan Event..."
-              type="text"
-              value={searchTerm}
-              onChange={handleSearch}
-            />
-            <div>
-              <img className="w-[28px]" src={searchIcon} alt="search icon" />
-            </div>
-          </form>
+      <div className="min-w-[375px]">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          className="bg-[#00B0B9] px-8 py-12 mx-8 rounded-3xl"
+        >
+          <div data-aos="fade-up" data-aos-duration="3000" className="flex">
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="flex w-[700px] bg-white  mx-auto px-4 py-2 rounded-md justify-between items-center gap-x-2"
+            >
+              <input
+                className="bg-transparent outline-none w-full"
+                placeholder="Masukkan Event..."
+                type="text"
+                value={searchTerm}
+                onChange={handleSearch}
+              />
+              <div>
+                <img className="w-[28px]" src={searchIcon} alt="search icon" />
+              </div>
+            </form>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 mt-16 gap-20">
           {data.map((event, index) => (
@@ -91,7 +96,9 @@ function Events() {
             <p className="text-white t">About us</p>
           </div>
           <div className="mt-[rem] sm:mr-8 md:mr-16 lg:mr-32 mx-auto md:mx-0">
-            <p className="flex justify-center text-white mb-[2rem] font-bold">Sponsored By</p>
+            <p className="flex justify-center text-white mb-[2rem] font-bold">
+              Sponsored By
+            </p>
             <img className="w-full" src={sponsor} alt="Sponsor" />
           </div>
         </div>
