@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import gform from "../assets/gform.png";
 import t3 from "../assets/t3.png";
 import logo2 from "../assets/logo2.png";
 import sponsor from "../assets/sponsor.png";
@@ -9,6 +8,8 @@ import { nanoid } from "nanoid"; // Impor nanoid
 import dhero1 from "../assets/dhero1.png";
 import dhero2 from "../assets/dhero2.png";
 import dhero3 from "../assets/dhero3.png";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Donates() {
   const [judul, setJudul] = useState("");
@@ -60,15 +61,37 @@ function Donates() {
         },
       });
 
+      toast.success('Posting Donasi Berhasil!', {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 5000, // Durasi tampilan notifikasi (opsional)
+        style: {
+          width: 'auto',
+          fontSize: '20px',
+          textAlign: 'center',
+        },
+      });
       console.log("post success: ", response);
-      navigate("/Events");
+      setTimeout(() => {
+        navigate("/Events");
+      }, 5000);
+      
     } catch (error) {
+      toast.error('Posting Donasi Gagal!', {
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 5000, // Durasi tampilan notifikasi (opsional)
+        style: {
+          width: 'auto',
+          fontSize: '10px',
+          textAlign: 'center',
+        },
+      });
       console.error("error: ", error);
     }
   };
 
   return (
     <div className="min-w-[375px]">
+      <ToastContainer />
       {/* Hero */}
       <div className="flex flex-col md:flex-row items-center justify-center mt-32 ml- mr- space-y-8 md:space-y-0 md:space-x-8 min-w-[375px]">
         <div className="text-center">
