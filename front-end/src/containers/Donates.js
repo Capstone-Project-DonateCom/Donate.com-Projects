@@ -61,24 +61,12 @@ function Donates() {
       });
 
       Swal.fire({
-        title: "Apakah Data Kamu Benar?",
-        text: "Pastikan kebenaran data yang kamu kirim!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Benar!"
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire({
-            title: "Data Terkirim!",
-            text: "Periksa data kamu di halaman Events!",
-            icon: "success",
-          });
-          console.log("post success: ", response);
-          navigate("/Events");
-        }
+        title: "Data Terkirim!",
+        text: "Periksa data kamu di halaman Events!",
+        icon: "success",
       });
+      console.log("post success: ", response);
+      navigate("/Events");
     
     } catch (error) {
       console.error("error: ", error);
