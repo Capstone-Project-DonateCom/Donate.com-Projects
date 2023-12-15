@@ -8,8 +8,7 @@ import { nanoid } from "nanoid"; // Impor nanoid
 import dhero1 from "../assets/dhero1.png";
 import dhero2 from "../assets/dhero2.png";
 import dhero3 from "../assets/dhero3.png";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Swal from "sweetalert2";
 
 function Donates() {
   const [judul, setJudul] = useState("");
@@ -61,37 +60,33 @@ function Donates() {
         },
       });
 
-      toast.success('Posting Donasi Berhasil!', {
-        position: toast.POSITION.TOP_CENTER,
-        autoClose: 5000, // Durasi tampilan notifikasi (opsional)
-        style: {
-          width: 'auto',
-          fontSize: '20px',
-          textAlign: 'center',
-        },
+      Swal.fire({
+        title: "Apakah Data Kamu Benar?",
+        text: "Pastikan kebenaran data yang kamu kirim!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Benar!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Data Terkirim!",
+            text: "Periksa data kamu di halaman Events!",
+            icon: "success",
+          });
+          console.log("post success: ", response);
+          navigate("/Events");
+        }
       });
-      console.log("post success: ", response);
-      setTimeout(() => {
-        navigate("/Events");
-      }, 5000);
-      
+    
     } catch (error) {
-      toast.error('Posting Donasi Gagal!', {
-        position: toast.POSITION.TOP_CENTER,
-        autoClose: 5000, // Durasi tampilan notifikasi (opsional)
-        style: {
-          width: 'auto',
-          fontSize: '10px',
-          textAlign: 'center',
-        },
-      });
       console.error("error: ", error);
     }
   };
 
   return (
     <div className="min-w-[375px]">
-      <ToastContainer />
       {/* Hero */}
       <div className="flex flex-col md:flex-row items-center justify-center mt-32 ml- mr- space-y-8 md:space-y-0 md:space-x-8 min-w-[375px]">
         <div className="text-center">
