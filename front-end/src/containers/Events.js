@@ -11,7 +11,7 @@ function Events() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/")
+      .get("https://troubled-polo-shirt-lamb.cyclic.app/")
       .then((res) => {
         if (Array.isArray(res.data)) {
           // Memastikan res.data adalah array
@@ -28,7 +28,7 @@ function Events() {
   );
 
   const data = filteredEvents.map((event) => ({
-    poster: `http://localhost:8000/image/${event.poster}`,
+    poster: event.poster,
     title: event.judul_donasi,
     description: event.deskripsi_donasi,
     labelDate: event.batas_donasi,

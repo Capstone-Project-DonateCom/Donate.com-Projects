@@ -53,7 +53,7 @@ function Donates() {
     try {
       const response = await axios({
         method: "post",
-        url: "http://localhost:8000/donates",
+        url: "https://troubled-polo-shirt-lamb.cyclic.app/donates",
         data,
         headers: {
           "Content-Type": "multipart/form-data",

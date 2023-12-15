@@ -15,7 +15,7 @@ const Detail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/events/${id_donasi}`)
+      .get(`https://troubled-polo-shirt-lamb.cyclic.app/events/${id_donasi}`)
       .then((response) => {
         console.log("Response from server:", response.data);
         setEventDetail(response.data); // Simpan detail acara yang diterima dari server
@@ -39,7 +39,7 @@ const Detail = () => {
         <div className="bg-white md:w-[1200px] shadow-xl mx-auto px-4 py-2 rounded-xl justify-between items-center">
           <img
             className="rounded-xl w-full md:w-[100%] py-9 mx-auto flex items-center"
-            src={`http://localhost:8000/image/${eventDetail.poster}`}
+            src={eventDetail.poster}
             alt="Event Poster"
           />
           <div className="mx-auto">

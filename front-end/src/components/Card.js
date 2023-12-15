@@ -9,7 +9,7 @@ const Card = ({ poster, title, description, labelDate, location, category, id })
 
   useEffect(() => {
     // Mengambil daftar event dari server
-    axios.get('http://localhost:8000/')
+    axios.get('https://troubled-polo-shirt-lamb.cyclic.app/')
       .then(response => {
         setEvents(response.data); // Menyimpan daftar event yang diterima dari server
       })
