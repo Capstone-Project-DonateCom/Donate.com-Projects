@@ -67,7 +67,6 @@ function Donates() {
       });
       console.log("post success: ", response);
       navigate("/Events");
-    
     } catch (error) {
       console.error("error: ", error);
     }
@@ -297,7 +296,7 @@ function Donates() {
                       </select>
                     </div>
                     <div className="col-span-6 sm:col-span-6">
-                      <label className="block text-2xl font-medium text-lg ">
+                      <label className="block text-2xl font-medium text-lg">
                         Upload Gambar
                       </label>
                       <input
@@ -305,9 +304,10 @@ function Donates() {
                         type="file"
                         name="gambar"
                         id="gambar"
-                        className="mt-1 p-2 border border-black border-2 py-3 mr-10 block w-[30.8rem]"
+                        className="mt-1 p-2 border border-black border-2 py-3 sm:py-2 w-full sm:w-auto"
                       ></input>
                     </div>
+
                     <div className="col-span-6 sm:col-span-6">
                       <label
                         for="alamat"
@@ -371,7 +371,9 @@ function Donates() {
             <p className="text-white t">About us</p>
           </div>
           <div className="mt-[rem] sm:mr-8 md:mr-16 lg:mr-32 mx-auto md:mx-0">
-            <p className="flex justify-center text-white mb-[2rem] font-bold">Sponsored By</p>
+            <p className="flex justify-center text-white mb-[2rem] font-bold">
+              Sponsored By
+            </p>
             <img className="w-full" src={sponsor} alt="Sponsor" />
           </div>
         </div>
