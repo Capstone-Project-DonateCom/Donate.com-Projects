@@ -78,7 +78,7 @@ const Homepage = () => {
               </div>
               <div>
                 <div className="mt-5">
-                  <p className="ml-4 md:ml-0 text-justify text-base md:text-xl">
+                  <p className="ml-4 md:ml-0 mr-4 md:mr-0 text-justify text-base md:text-xl">
                     Temukan kebaikan di Donate.com, tempat di mana komunitas
                     pembuat donasi dan pendonasi saling mendukung. Proyek donasi
                     beragam menanti Anda, dari kesehatan hingga pendidikan.
