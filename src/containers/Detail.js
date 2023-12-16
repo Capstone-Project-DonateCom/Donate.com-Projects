@@ -77,9 +77,9 @@ const Detail = () => {
         <div className="flex justify-center items-center mt-4 mx-auto">
           <div className="text-center">
             <div className="flex flex-col md:flex-row items-center gap-x-4 mb-[5rem]">
-              <img src={WA} alt="WhatsApp Logo" />
+              <img className="my-6" src={WA} alt="WhatsApp Logo" />
               <p className="font-bold text-xl">{eventDetail.no_telepon}</p>
-              <img src={Gmail} alt="Gmail Logo" />
+              <img className="my-6" src={Gmail} alt="Gmail Logo" />
               <p className="font-bold text-xl">{eventDetail.email}</p>
             </div>
           </div>
