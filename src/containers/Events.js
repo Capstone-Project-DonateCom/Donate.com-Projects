@@ -11,7 +11,7 @@ function Events() {
 
   useEffect(() => {
     axios
-      .get("https://troubled-polo-shirt-lamb.cyclic.app/")
+      .get("https://calm-pear-eel-garb.cyclic.app/")
       .then((res) => {
         if (Array.isArray(res.data)) {
           // Memastikan res.data adalah array

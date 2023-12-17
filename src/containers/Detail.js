@@ -15,7 +15,7 @@ const Detail = () => {
 
   useEffect(() => {
     axios
-      .get(`https://troubled-polo-shirt-lamb.cyclic.app/events/${id_donasi}`)
+      .get(`https://calm-pear-eel-garb.cyclic.app/events/${id_donasi}`)
       .then((response) => {
         console.log("Response from server:", response.data);
         setEventDetail(response.data); // Simpan detail acara yang diterima dari server

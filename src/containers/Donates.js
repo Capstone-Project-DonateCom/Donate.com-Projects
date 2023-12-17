@@ -53,7 +53,7 @@ function Donates() {
     try {
       const response = await axios({
         method: "post",
-        url: "https://troubled-polo-shirt-lamb.cyclic.app/donates",
+        url: "https://calm-pear-eel-garb.cyclic.app/donates",
         data,
         headers: {
           "Content-Type": "multipart/form-data",
